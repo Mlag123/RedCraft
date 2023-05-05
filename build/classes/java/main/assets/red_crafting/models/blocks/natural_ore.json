@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "red_crafting:blocks/natural_ore"
+    }
+}

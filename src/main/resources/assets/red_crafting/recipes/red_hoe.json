@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ii",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "i": {
+      "item": "red_crafting:red_ingot"
+    },
+    "/": {
+      "item": "red_crafting:stone_stick"
+    }
+  },
+  "result": {
+    "item": "red_crafting:red_hoe",
+    "count": 1
+  }
+}

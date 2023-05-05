@@ -1,0 +1,11 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2023-04-26 00:40:00 +0700",
+      "plains": "2023-04-26 00:39:35 +0700",
+      "extreme_hills": "2023-04-26 00:40:06 +0700",
+      "river": "2023-04-26 00:39:59 +0700"
+    },
+    "done": false
+  }
+}
