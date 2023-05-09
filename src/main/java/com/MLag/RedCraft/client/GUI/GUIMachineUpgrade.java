@@ -10,6 +10,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class GUIMachineUpgrade extends GuiContainer {
     private static final ResourceLocation MACHINE_GUI = new ResourceLocation(Constants.MODIDS, Constants.RESOURCE_LOCATION_GUI_MACHINEBLOCK);
+    //private final InventoryPlayer player;
+    //private final Tile
     IInventory playerInventory;
     IInventory MachineInventory;
 

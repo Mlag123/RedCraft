@@ -1,9 +1,8 @@
 package com.MLag.RedCraft.Items;
 
-import com.MLag.RedCraft.CreativeTabsRegister;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
 public class ItemCreateSword extends ItemSword implements IHasModel {
@@ -11,7 +10,7 @@ public class ItemCreateSword extends ItemSword implements IHasModel {
         super(material);
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
-        this.setCreativeTab(CreativeTabsRegister.TOOL);
+        this.setCreativeTab(CreativeTabsRegister.COMBAT);
         ItemsRegisters.Items_Arrays.add(this);
 
     }

@@ -1,17 +1,10 @@
 package com.MLag.RedCraft.Blocks;
 
-import com.MLag.RedCraft.CreativeTabsRegister;
-import com.google.common.base.Predicate;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.Random;

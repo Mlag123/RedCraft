@@ -1,8 +1,6 @@
 package com.MLag.RedCraft.Items;
 
-import com.MLag.RedCraft.CreativeTabsRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.item.ItemHoe;
 
 public class ItemCreateHoe extends ItemHoe {

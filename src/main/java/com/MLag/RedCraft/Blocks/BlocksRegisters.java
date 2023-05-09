@@ -5,7 +5,7 @@ import com.MLag.RedCraft.Blocks.SpecifityBlocks.NaturalBlock;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.NaturalOre;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.RedBlock;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.RedOre;
-import com.MLag.RedCraft.CreativeTabsRegister;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

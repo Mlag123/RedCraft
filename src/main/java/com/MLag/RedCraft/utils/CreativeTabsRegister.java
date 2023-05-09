@@ -1,4 +1,4 @@
-package com.MLag.RedCraft;
+package com.MLag.RedCraft.utils;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
 import com.MLag.RedCraft.Items.ItemsRegisters;
@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
 public class CreativeTabsRegister {
-//создание вкладок в креативе
+    //создание вкладок в креативе
     public static final CreativeTabs BLOCKS = new CreativeTabs("red_tabs") {
         @Override
         public ItemStack getTabIconItem() {
@@ -24,6 +24,12 @@ public class CreativeTabsRegister {
         @Override
         public ItemStack getTabIconItem() {
             return new ItemStack(ItemsRegisters.red_ingot);
+        }
+    };
+    public static final CreativeTabs COMBAT = new CreativeTabs("red_combat") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(ItemsRegisters.Red_Sword);
         }
     };
 }

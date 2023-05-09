@@ -1,7 +1,7 @@
 package com.MLag.RedCraft.Blocks.Machines;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
-import com.MLag.RedCraft.CreativeTabsRegister;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

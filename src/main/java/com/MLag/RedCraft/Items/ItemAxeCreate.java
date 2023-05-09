@@ -1,9 +1,8 @@
 package com.MLag.RedCraft.Items;
 
-import com.MLag.RedCraft.CreativeTabsRegister;
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 
 public class ItemAxeCreate extends ItemAxe  implements IHasModel {
