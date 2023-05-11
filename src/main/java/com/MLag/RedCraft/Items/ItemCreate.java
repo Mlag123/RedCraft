@@ -14,12 +14,6 @@ public class ItemCreate extends Item implements IHasModel {
 
     }
 
-    public ItemCreate(String RegName, String UnlName) {
-        this.setUnlocalizedName(UnlName);
-        this.setRegistryName(RegName);//
-
-
-    }
 
     @Override
     public void registerModels() {

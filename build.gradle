@@ -4,17 +4,17 @@ buildscript {
         maven {
             url = 'https://maven.minecraftforge.net/'
 
-		}
+        }
         mavenCentral()
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
-		 
+
     }
 }
-        
-		
-		
+
+
+
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
@@ -35,7 +35,7 @@ minecraft {
     //mappings channel: 'snapshot', version: '20171003-1.12'
     mappings channel: 'snapshot', version: '20171003-1.12'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-    
+
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
@@ -74,6 +74,8 @@ dependencies {
     // compile "some.group:artifact:version"
     //   compile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
     compile fileTree(dir: './libs/', include: ['RedStoneFlux.jar'])
+       //deobfCompile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
+
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
@@ -95,20 +97,20 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "examplemod",
-            "Specification-Vendor": "examplemodsareus",
-            "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title": "examplemod",
+                "Specification-Vendor": "examplemodsareus",
+                "Specification-Version": "1", // We are version 1 of ourselves
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"examplemodsareus",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
 
 // Example configuration to allow publishing using the maven-publish task
 // This is the preferred method to reobfuscate your jar file
-jar.finalizedBy('reobfJar') 
+jar.finalizedBy('reobfJar')
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
 
@@ -120,9 +122,10 @@ publishing {
     }
     repositories {
         maven {
-           url "file:///${project.projectDir}/http://maven.covers1624.net"
-		//	name = "CoFH Maven"
-      //  url = "http://maven.covers1624.net"
+            url "file:///${project.projectDir}/http://maven.covers1624.net"
+            	name = "CoFH Maven"
+              url = "http://maven.covers1624.net"
+			
         }
     }
 }
@@ -131,12 +134,12 @@ apply plugin: 'idea'
 idea {
     module {
         inheritOutputDirs = true
-		
+
     }
 }
 task prepareAssets(type: Copy) {
-group = 'build'
-from project.file('src/main/resources')
-into project.file('build/classes/java/main') //вместо kotlin ставьте java, если вы используете ее
+    group = 'build'
+    from project.file('src/main/resources')
+    into project.file('build/classes/java/main') //вместо kotlin ставьте java, если вы используете ее
 }
 project.classes.dependsOn(prepareAssets)
