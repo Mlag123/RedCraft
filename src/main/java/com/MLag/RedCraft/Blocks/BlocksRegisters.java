@@ -18,12 +18,14 @@ public class BlocksRegisters {
     //блоки
     public static Block Red_ore = new RedOre("red_ore");
     public static Block Natural_ore = new NaturalOre("natural_ore");
-    public static Block Red_block = new RedBlock("red_block", Material.IRON,5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
+    public static Block Red_block = new RedBlock("red_block", Material.IRON, 5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
     //  Block machine_upgrade = new MachineUpgrade("machine_upgrade","Machine Upgrader", Material.IRON); //
-    public static Block Natural_Block = new NaturalBlock("natural_block", Material.IRON,5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
-    public static Block Machine_Upgrade = new MachineUpgrade("machine_upgrade",Material.IRON);
-    public static Block stonned_plantes = new BlockCreate("stone_plantes",Material.PLANTS,0f,CreativeTabsRegister.BLOCKS,SoundType.PLANT);
-    public static Block super_chest = new SuperChest("super_chest", BlockChest.Type.BASIC);
+    public static Block Natural_Block = new NaturalBlock("natural_block", Material.IRON, 5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
+    public static Block Machine_Upgrade = new MachineUpgrade("machine_upgrade", Material.IRON);
+    public static Block stonned_plantes = new BlockCreate("stone_plantes", Material.PLANTS, 0f, CreativeTabsRegister.BLOCKS, SoundType.PLANT);
+    public static final Block Red_Chest = new RedChest("red_chest", Material.IRON, 5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
+    //public static Block super_chest = new SuperChest("super_chest", BlockChest.Type.BASIC);
+
     public BlocksRegisters() {
 
     }

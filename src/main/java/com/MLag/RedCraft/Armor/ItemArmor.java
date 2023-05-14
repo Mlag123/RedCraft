@@ -13,5 +13,6 @@ public class ItemArmor extends net.minecraft.item.ItemArmor {
         this.setRegistryName(Name);
         this.setCreativeTab(CreativeTabsRegister.COMBAT);
         ItemsRegisters.Items_Arrays.add(this);
+
     }
 }
