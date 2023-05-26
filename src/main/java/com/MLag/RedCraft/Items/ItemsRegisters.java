@@ -41,6 +41,6 @@ public class ItemsRegisters {
     Item LEGGS = new com.MLag.RedCraft.Armor.ItemArmor("red_leggs", RED_ARMOR_MATERIAL, 2, EntityEquipmentSlot.LEGS);
     Item Chestplate = new com.MLag.RedCraft.Armor.ItemArmor("red_chestplate", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.CHEST);
     Item HEAD = new com.MLag.RedCraft.Armor.ItemArmor("red_head", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.HEAD);
-
+//fixme textures for armor
 
 }
