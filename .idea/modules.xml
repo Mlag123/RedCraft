@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedCraft.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RedCraft.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedCraft.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RedCraft.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.test.iml" />
     </modules>
   </component>
 </project>

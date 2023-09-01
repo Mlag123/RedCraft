@@ -5,11 +5,13 @@ import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.ActionResult;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-public class MachineUpgrade extends Block implements MachineCreated{
+public class MachineUpgrade extends Block implements MachineCreated {
 
 
-    public MachineUpgrade(String name,Material blockMaterialIn) {
+    public MachineUpgrade(String name, Material blockMaterialIn) {
         super(blockMaterialIn);
         this.setHardness(5f);
         this.setRegistryName(name);
@@ -22,6 +24,11 @@ public class MachineUpgrade extends Block implements MachineCreated{
 
     @Override
     public void updateTick() {
+
+    }
+
+
+    public void RightClickBlock() {
 
     }
 
