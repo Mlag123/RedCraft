@@ -24,6 +24,7 @@ public class BlocksRegisters {
     public static Block Machine_Upgrade = new MachineUpgrade("machine_upgrade", Material.IRON);
     public static Block stonned_plantes = new BlockCreate("stone_plantes", Material.PLANTS, 0f, CreativeTabsRegister.BLOCKS, SoundType.PLANT);
     public static final Block Red_Chest = new RedChest("red_chest", Material.IRON, 5f, CreativeTabsRegister.BLOCKS, SoundType.METAL);
+    public static final Block FossilizedRemainsOre = new FossilizedRemainsOre("fossilized_remain_ore");
     //public static Block super_chest = new SuperChest("super_chest", BlockChest.Type.BASIC);
 
     public BlocksRegisters() {

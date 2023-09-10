@@ -142,4 +142,7 @@ task prepareAssets(type: Copy) {
     from project.file('src/main/resources')
     into project.file('build/classes/java/main') //вместо kotlin ставьте java, если вы используете ее
 }
+sourceSets {
+    main { output.resourcesDir = output.classesDir }
+}
 project.classes.dependsOn(prepareAssets)

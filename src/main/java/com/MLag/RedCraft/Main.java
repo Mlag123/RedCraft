@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
+import static com.MLag.RedCraft.client.GUI.GUITest.initTexrute;
+
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main {
     public static final String MODID = "red_crafting";
@@ -37,6 +39,7 @@ public class Main {
         BlockReg.registerRender();
         FurnanceRegistrarion.FurnanceRegistarion();
         GameRegistry.registerWorldGenerator(new GeneratorOre(), 0);
+        initTexrute();
     }
 
 

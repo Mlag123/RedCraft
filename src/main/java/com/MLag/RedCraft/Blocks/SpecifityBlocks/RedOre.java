@@ -19,6 +19,7 @@ public class RedOre extends BlockCreateOre {
     }
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
+        // FIXME: 06.09.2023 
 
         if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
             entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);

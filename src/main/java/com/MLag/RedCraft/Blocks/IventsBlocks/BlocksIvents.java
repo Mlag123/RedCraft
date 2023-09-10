@@ -6,16 +6,18 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityEvent;
 
-public class BlocksIvents {
+public class BlocksIvents{
     String EntityEvents;
     // FIXME: 03.05.2023
 
     public BlocksIvents(String EntityEvents) {
+
         this.EntityEvents = EntityEvents;
         switch (EntityEvents) {
             case "DamageOnFire":
@@ -26,6 +28,8 @@ public class BlocksIvents {
                 break;
         }
     }
+
+
 
 
 

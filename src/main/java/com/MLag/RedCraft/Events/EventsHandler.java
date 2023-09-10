@@ -15,6 +15,8 @@ public class EventsHandler {
     @SubscribeEvent
     public static void onJoin(EntityJoinWorldEvent e ){
 
+
+
        // EntityPlayer player = (EntityPlayer) e.getEntity();
        // player.sendMessage(new TextComponentString("Hello, %p!".replace("%p", player.getName())));
 

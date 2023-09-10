@@ -49,7 +49,10 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "plains": "2023-05-10 00:53:29 +0700"
+      "beaches": "2023-09-06 00:22:21 +0700",
+      "plains": "2023-05-10 00:53:29 +0700",
+      "ocean": "2023-09-06 00:22:19 +0700",
+      "river": "2023-09-06 00:22:34 +0700"
     },
     "done": false
   }

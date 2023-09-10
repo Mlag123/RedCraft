@@ -26,7 +26,7 @@ public class GuiHandler implements IGuiHandler {
         TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
         if(te!= null){
             if(ID==0){
-                return new GUIMachineUpgrade((TileEntityStorageMachine)te, player);
+                //return new GUIMachineUpgrade((TileEntityStorageMachine)te, player);
             }
         }
 
