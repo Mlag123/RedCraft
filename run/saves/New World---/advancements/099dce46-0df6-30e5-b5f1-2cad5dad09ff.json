@@ -1,0 +1,19 @@
+{
+  "minecraft:recipes/redstone/redstone": {
+    "criteria": {
+      "has_redstone_block": "2023-09-12 20:01:58 +0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "extreme_hills_with_trees": "2023-09-12 20:49:09 +0700",
+      "desert_hills": "2023-09-12 20:03:04 +0700",
+      "savanna": "2023-09-12 19:59:43 +0700",
+      "extreme_hills": "2023-09-12 20:03:40 +0700",
+      "river": "2023-09-12 20:02:37 +0700",
+      "desert": "2023-09-12 20:02:54 +0700"
+    },
+    "done": false
+  }
+}

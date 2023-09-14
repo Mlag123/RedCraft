@@ -11,6 +11,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import static com.MLag.RedCraft.Blocks.SpecifityBlocks.RedOre.fireAttack;
+
 public class RedBlock extends BlockCreate {
     public RedBlock(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
         super(name, material, setHardness, creativeTabs, soundType);
@@ -18,12 +20,7 @@ public class RedBlock extends BlockCreate {
 
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-
-        if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
-            entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
-        }
-        this.setLightLevel(0.0f);
-        super.onEntityWalk(worldIn, pos, entityIn);
+        fireAttack(entityIn);
 
     }
 

@@ -26,7 +26,7 @@ public class GeneratorOre implements IWorldGenerator {
             case 0:
                 runGenerator(BlocksRegisters.Red_ore.getDefaultState(), 8, 8, 2, 16, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
                 runGenerator(BlocksRegisters.Natural_ore.getDefaultState(), 8, 8, 2, 16, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
-
+                runGenerator(BlocksRegisters.FossilizedRemainsOre.getDefaultState(),8,8,2,56,BlockMatcher.forBlock(Blocks.STONE),world,random,chunkX,chunkZ);
                 break;
         }
 

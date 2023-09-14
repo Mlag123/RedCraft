@@ -13,7 +13,7 @@ public class FossilizedRemainsOre extends BlockCreateOre {
     }
 
     @Override
-    public boolean isReplaceableOreGen(IBlockState p_isReplaceableOreGen_1_, IBlockAccess p_isReplaceableOreGen_2_, BlockPos p_isReplaceableOreGen_3_, Predicate<IBlockState> p_isReplaceableOreGen_4_) {
-        return super.isReplaceableOreGen(p_isReplaceableOreGen_1_, p_isReplaceableOreGen_2_, p_isReplaceableOreGen_3_, p_isReplaceableOreGen_4_);
+    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+        return super.isReplaceableOreGen(state, world, pos, target);
     }
 }

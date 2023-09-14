@@ -1,0 +1,10 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "savanna": "2023-09-12 00:11:57 +0700",
+      "river": "2023-09-12 00:12:04 +0700",
+      "desert": "2023-09-12 00:12:05 +0700"
+    },
+    "done": false
+  }
+}
