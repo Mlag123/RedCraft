@@ -10,6 +10,10 @@ item.pressed_wooden_stick.name=Pressed Wooden Stick
 item.natural_ingot.name=Natural Ingot
 item.red_hoe.name=Fire Hoe
 item.wrench.name=Wrench
+item.semen_in_capsule.name=Capsule with semen
+item.capsule_item.name=Empty Capsule
+item.natural_amuelt.name=Natural Amulet (not used)
+item.semen_item.name=Semen
 
 
 ##blocks
@@ -18,6 +22,7 @@ tile.natural_ore.name=Natural Ore
 tile.red_block.name=Fire Block
 tile.natural_block.name=Natural Block
 tile.machine_upgrade.name=Machine Upgrader
+tile.boykisser_block.name=Boykisser Block
 
 
 #tooltabs

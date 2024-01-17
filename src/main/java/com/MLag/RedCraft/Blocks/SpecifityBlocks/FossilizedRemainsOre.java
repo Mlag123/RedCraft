@@ -7,9 +7,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
 public class FossilizedRemainsOre extends BlockCreateOre {
+
+
     public FossilizedRemainsOre(String name) {
         super(name);
-        this.setHardness(5f);
     }
 
     @Override

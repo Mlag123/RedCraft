@@ -8,10 +8,13 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import static com.MLag.RedCraft.client.GUI.GUITest.initTexrute;
+
 public class BlockRegistationHandler {
     // public static Block BEST_STONE = new BlockBestStone("best_stone");
 //регистрация блоков, и рендер(моделей к ним)
     public static void register() {
+
 
         for (int i = 0; i < BlocksRegisters.BLOCKS_ARRAY.size(); i++) {
             setRegister(BlocksRegisters.BLOCKS_ARRAY.get(i));

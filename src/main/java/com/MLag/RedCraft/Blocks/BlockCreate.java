@@ -18,6 +18,7 @@ import java.util.Random;
 
 //шаблок создание простого блока
 public class BlockCreate extends Block {
+
     private boolean EntityPlayerDamageFire = false;
 
     public BlockCreate(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
@@ -30,38 +31,10 @@ public class BlockCreate extends Block {
         BlocksRegisters.BLOCKS_ARRAY.add(this);
     }
 
-/*
-    public BlockCreate(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType, boolean EntityPlayerDamageFire) {
-        super(material);
-        this.setHardness(setHardness);
-        this.EntityPlayerDamageFire = EntityPlayerDamageFire;
-        this.setRegistryName(name);
-        this.setUnlocalizedName(name);
-        this.setCreativeTab(creativeTabs);
-        this.setSoundType(soundType);
-        BlocksRegisters.BLOCKS_ARRAY.add(this);
-    }
-*/
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
         // return super.getItemDropped(state, rand, fortune);
         return Item.getItemFromBlock(this);
     }
-
-
-
-/*
-    public enum EffectsOnBlock {
-        EntityPlayerDamageOnFire,
-        EntityPlayerRegenirtion,
-        EntityPlayerInstntlyRegenertion,
-
-
-    }
-*/
-
-
 }
-
-    //надо реализовать

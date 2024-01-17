@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " / ",
+    "   "
+  ],
+  "key": {
+    "/": {
+      "item": "red_crafting:semen_in_capsule_item"
+    }
+  },
+  "result": {
+    "item": "red_crafting:red_axe",
+    "count": 1
+  }
+}

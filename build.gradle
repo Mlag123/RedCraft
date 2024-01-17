@@ -142,7 +142,11 @@ task prepareAssets(type: Copy) {
     from project.file('src/main/resources')
     into project.file('build/classes/java/main') //вместо kotlin ставьте java, если вы используете ее
 }
-sourceSets {
-    main { output.resourcesDir = output.classesDir }
+task moveResources {
+    doLast {
+        ant.move file: "${buildDir}/resources/main",
+                todir: "${buildDir}/classes/java"
+    }
 }
-project.classes.dependsOn(prepareAssets)
+moveResources.dependsOn processResources
+classes.dependsOn moveResources

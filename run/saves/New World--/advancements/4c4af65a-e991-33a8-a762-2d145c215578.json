@@ -1,7 +1,19 @@
 {
+  "minecraft:recipes/redstone/sticky_piston": {
+    "criteria": {
+      "has_slime_ball": "2023-10-22 01:43:03 +0700"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/repeater": {
     "criteria": {
       "has_redstone_torch": "2023-09-10 02:02:46 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/lead": {
+    "criteria": {
+      "has_slime_ball": "2023-10-22 01:43:03 +0700"
     },
     "done": true
   },

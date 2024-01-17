@@ -11,6 +11,11 @@ item.pressed_wooden_stick.name=Спрессованная деревянная �
 item.natural_ingot.name = Натуральный слиток
 item.wrench.name=Ключ
 item.red_hoe.name=Огненная мотыга
+item.semen_in_capsule.name=Капсула с семенем
+item.capsule_item.name=Пустая капсула
+item.natural_amuelt.name=Природный амулет (не используется)
+item.semen_item.name=Семя
+
 
 #tooltabs
 itemGroup.tool_tabs=Инструменты RedCraft
@@ -22,4 +27,6 @@ tile.natural_ore.name=Натуральная руда
 tile.red_block.name=Огненный блок
 tile.natural_block.name=Натуральный блок
 tile.machine_upgrade.name=Машина Улучшения
+tile.boykisser_block.name=Блок Бойкиссера
+
 

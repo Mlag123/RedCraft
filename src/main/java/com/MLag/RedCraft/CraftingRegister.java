@@ -12,7 +12,7 @@ public class CraftingRegister {
 
 
     public void register(){
-        registerRecipes("key");
+        registerRecipes("red_crafting");
     }
     private void registerRecipes(String name){
 

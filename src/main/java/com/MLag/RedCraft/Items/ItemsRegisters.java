@@ -1,8 +1,7 @@
 package com.MLag.RedCraft.Items;
 
+import com.MLag.RedCraft.Items.SpecificityItems.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
-import com.MLag.RedCraft.Items.SpecificityItems.NaturalAmuletItem;
-import com.MLag.RedCraft.Items.SpecificityItems.Wrench;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -41,6 +40,10 @@ public class ItemsRegisters {
     Item LEGGS = new com.MLag.RedCraft.Armor.ItemArmor("red_leggs", RED_ARMOR_MATERIAL, 2, EntityEquipmentSlot.LEGS);
     Item Chestplate = new com.MLag.RedCraft.Armor.ItemArmor("red_chestplate", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.CHEST);
     Item HEAD = new com.MLag.RedCraft.Armor.ItemArmor("red_head", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.HEAD);
+    public static Item semenItem = new SemenItem("semen_item", CreativeTabsRegister.MATERIALS);
+    public static Item capsuleItem = new CapsuleItem("capsule_item", CreativeTabsRegister.MATERIALS);
+    public static Item semenInCapsule = new SemenInCapsuleItem("semen_in_capsule", CreativeTabsRegister.MATERIALS);
+
 //fixme textures for armor
 
 }
