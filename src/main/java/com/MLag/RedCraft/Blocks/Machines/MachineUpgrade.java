@@ -16,7 +16,9 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.MLag.RedCraft.Main.GUITexture;
 
+@Deprecated
 public class MachineUpgrade extends Block implements MachineCreated {
 
 
@@ -45,13 +47,8 @@ public class MachineUpgrade extends Block implements MachineCreated {
     @Override
     public boolean onBlockActivated(World p_180639_1_, BlockPos p_180639_2_, IBlockState p_180639_3_, EntityPlayer p_180639_4_, EnumHand p_180639_5_, EnumFacing p_180639_6_, float p_180639_7_, float p_180639_8_, float p_180639_9_) {
         log.info("Clicked");
-        try {
-            FMLCommonHandler.instance().showGuiScreen(new GUITest());
-        } catch (Exception e) {
-            log.info(e);
+        FMLCommonHandler.instance().showGuiScreen(new GUITest());
 
-            e.printStackTrace();
-        }
 
         return super.onBlockActivated(p_180639_1_, p_180639_2_, p_180639_3_, p_180639_4_, p_180639_5_, p_180639_6_, p_180639_7_, p_180639_8_, p_180639_9_);
     }
