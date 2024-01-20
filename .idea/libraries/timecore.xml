@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="timecore">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/timecore.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

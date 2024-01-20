@@ -1,5 +1,7 @@
 package com.MLag.RedCraft;
 
+import com.MLag.RedCraft.Entitiyes.EntityInit;
+import com.MLag.RedCraft.Entitiyes.InitEntity;
 import com.MLag.RedCraft.Proxy.CommonProxy;
 import com.MLag.RedCraft.client.GUI.GUITest;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
@@ -12,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.MLag.RedCraft.Constants.MODIDS;
@@ -37,11 +40,19 @@ public class Main {
     @Deprecated
     public static ResourceLocation GUITexture;
 
+    @Mod.Instance(MODID)
+    public static Main instance;
+    Logger log = LogManager.getLogger();
+    public static ResourceLocation reca = new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj");
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
+
       //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
         TextureLoader textureLoader = new TextureLoader();
+        EntityInit.registerEnitiyes();
 
+        // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
 
         BlockReg.registerRender();

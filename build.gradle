@@ -3,16 +3,16 @@ buildscript {
     repositories {
         maven {
             url = 'https://maven.minecraftforge.net/'
-
         }
         mavenCentral()
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
 
+
+
     }
 }
-
 
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -74,7 +74,8 @@ dependencies {
     // compile "some.group:artifact:version"
     //   compile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
     compile fileTree(dir: './libs/', include: ['RedStoneFlux.jar'])
-       //deobfCompile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
+    compile fileTree(dir: './libs/', include: ['timecore.jar'])
+    //deobfCompile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
 
 
     // Real examples
@@ -97,12 +98,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "examplemod",
-                "Specification-Vendor": "examplemodsareus",
-                "Specification-Version": "1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"examplemodsareus",
+                "Specification-Title"     : "examplemod",
+                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "examplemodsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -123,9 +124,9 @@ publishing {
     repositories {
         maven {
             url "file:///${project.projectDir}/http://maven.covers1624.net"
-            	name = "CoFH Maven"
-              url = "http://maven.covers1624.net"
-			
+            name = "CoFH Maven"
+            url = "http://maven.covers1624.net"
+
         }
     }
 }

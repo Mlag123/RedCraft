@@ -34,7 +34,7 @@ public class CapsuleItem extends ItemCreate {
     }
 
     Logger log;
-@SideOnly(Side.CLIENT)
+@SideOnly(Side.CLIENT) // FIXME: 21.01.2024 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         float player_health = playerIn.getHealth();
