@@ -1,7 +1,9 @@
 package com.MLag.RedCraft;
 
 import com.MLag.RedCraft.Proxy.CommonProxy;
+import com.MLag.RedCraft.client.GUI.GUITest;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
+import com.MLag.RedCraft.utils.Handlers.TextureLoader;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,10 +12,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Logger;
 
+import static com.MLag.RedCraft.Constants.MODIDS;
 import static com.MLag.RedCraft.client.GUI.GUITest.initTexrute;
 
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
@@ -38,12 +39,14 @@ public class Main {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ReadingTexture readingTexture = new ReadingTexture();
+      //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
+        TextureLoader textureLoader = new TextureLoader();
 
         BlockReg.register();
 
         BlockReg.registerRender();
-
+        FurnanceRegistrarion.FurnanceRegistarion();
+        regCraft.register();
         GameRegistry.registerWorldGenerator(new GeneratorOre(), 0);
         initTexrute(); // FIXME: 22.10.2023
 
@@ -58,7 +61,6 @@ public class Main {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        FurnanceRegistrarion.FurnanceRegistarion();
-        regCraft.register();
+
     }
 }

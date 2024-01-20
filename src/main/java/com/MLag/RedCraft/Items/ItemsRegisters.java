@@ -40,7 +40,7 @@ public class ItemsRegisters {
     Item LEGGS = new com.MLag.RedCraft.Armor.ItemArmor("red_leggs", RED_ARMOR_MATERIAL, 2, EntityEquipmentSlot.LEGS);
     Item Chestplate = new com.MLag.RedCraft.Armor.ItemArmor("red_chestplate", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.CHEST);
     Item HEAD = new com.MLag.RedCraft.Armor.ItemArmor("red_head", RED_ARMOR_MATERIAL, 1, EntityEquipmentSlot.HEAD);
-    public static Item semenItem = new SemenItem("semen_item", CreativeTabsRegister.MATERIALS);
+    public static Item semenItem = new SemenItem("semen_item", CreativeTabsRegister.MATERIALS,1,50f,true);
     public static Item capsuleItem = new CapsuleItem("capsule_item", CreativeTabsRegister.MATERIALS);
     public static Item semenInCapsule = new SemenInCapsuleItem("semen_in_capsule", CreativeTabsRegister.MATERIALS);
 

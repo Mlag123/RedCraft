@@ -1,5 +1,6 @@
 package com.MLag.RedCraft.client.GUI;
 
+import com.MLag.RedCraft.utils.Handlers.TextureLoader;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.resources.IResourceManager;
@@ -7,6 +8,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
+
+import static com.MLag.RedCraft.Constants.MODIDS;
 
 public class GUITest extends GuiScreen {
     @SideOnly(Side.CLIENT)
@@ -19,15 +22,19 @@ public class GUITest extends GuiScreen {
 //        guitexrure = new ResourceLocation("red_crafting/textures/gui/machineblock.png");
     }
 
+    public static void SetTextureTest(ResourceLocation resourceLocation){
+        guitexrure = resourceLocation;
+    }
     public GUITest() {
-        guitexrure = new ResourceLocation("red_crafting/textures/gui/machine_upgrade.png");
+
 
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void drawScreen(int w, int h, float partialTicks) {
         GL11.glColor4f(1.0f, 1.0f, 10.f, 1.0f);
-        mc.getTextureManager().bindTexture(guitexrure);
+        mc.getTextureManager().bindTexture(TextureLoader.MachineTextureGui);
         int offset = (width - guiWidth) / 2;
         drawTexturedModalRect(offset, 2, 0, 0, guiWidth, guiHeight);
         fontRenderer.drawString("loglogloglg", offset, 170, 0);

@@ -34,6 +34,7 @@ public class BlockRegistationHandler {
         ForgeRegistries.ITEMS.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         Main.proxy.registerItemRenderer(Item.getItemFromBlock(block), 0, "inventory");
 
+
     }
 
     @SideOnly(Side.CLIENT)

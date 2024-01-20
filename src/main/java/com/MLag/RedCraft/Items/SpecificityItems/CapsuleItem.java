@@ -10,7 +10,9 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
@@ -19,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.logging.Logger;
 
@@ -30,7 +34,7 @@ public class CapsuleItem extends ItemCreate {
     }
 
     Logger log;
-
+@SideOnly(Side.CLIENT)
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         float player_health = playerIn.getHealth();
@@ -41,6 +45,7 @@ public class CapsuleItem extends ItemCreate {
                 playerIn.attackEntityFrom(DamageSource.OUT_OF_WORLD,10);
              playerIn.inventory.clearMatchingItems(new ItemStack(ItemsRegisters.capsuleItem).getItem(),0,1, null);
                 playerIn.addItemStackToInventory(new ItemStack(ItemsRegisters.semenInCapsule));
+                playerIn.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,500));
 
             }
         }else {
@@ -51,6 +56,7 @@ public class CapsuleItem extends ItemCreate {
     }
 //        log.info("Semen Click, player health " + player_health);
         return super.onItemRightClick(worldIn, playerIn, handIn);
+
     }
 
 //    @Override
