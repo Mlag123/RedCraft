@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#E",
+        "BS"
+    ],
+    "key": {
+        "#": {
+            "item": "red_crafting:red_pickaxe"
+        },
+        "E": {
+            "item": "red_crafting:red_axe"
+        },
+        "B": {
+            "item": "red_crafting:red_spade"
+        },
+        "S": {
+            "item": "red_crafting:red_hoe"
+        }
+    },
+    "result": {
+        "item": "red_crafting:fire_pickaxe",
+        "count": 1
+    }
+}
