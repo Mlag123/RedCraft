@@ -2,8 +2,13 @@ package com.MLag.RedCraft;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -39,6 +44,7 @@ public class BlockRegistationHandler {
 
     @SideOnly(Side.CLIENT)
     private static void setRender(Block block) {
-
+        // Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 1, new ModelResourceLocation(block.getRegistryName(), "normal"));
+//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register();
     }
 }

@@ -23,6 +23,7 @@ tile.red_block.name=Fire Block
 tile.natural_block.name=Natural Block
 tile.machine_upgrade.name=Machine Upgrader
 tile.boykisser_block.name=Boykisser Block
+tile.maxwell_block.name=Maxwell
 
 
 #tooltabs

@@ -24,7 +24,7 @@ public class ItemsRegistrationHandler {
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e) {
          new ItemsRegisters();
-        //    e.getRegistry().registerAll(ItemsRegisters.Items_Arrays.toArray(new Item[0]));
+            e.getRegistry().registerAll(ItemsRegisters.Items_Arrays.toArray(new Item[0]));
         for (int i = 0; i < ItemsRegisters.Items_Arrays.size(); i++) {
             e.getRegistry().register(ItemsRegisters.Items_Arrays.get(i));
         }

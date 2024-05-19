@@ -20,7 +20,7 @@ public class RedBlock extends BlockCreate {
 
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-        fireAttack(entityIn);
+     //   fireAttack(entityIn);
 
     }
 

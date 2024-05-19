@@ -21,34 +21,33 @@ public class NaturalBlock extends BlockCreate {
     public NaturalBlock(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
         super(name, material, setHardness, creativeTabs, soundType);
     }
-    public void Regeneration(World worldIn,Entity entityIn){
-      if(!worldIn.isRemote){
-          try {
-              EntityPlayer player = (EntityPlayer) entityIn; // обработка игрока
-              Entity entity = (Entity) entityIn;
-              //  TileEntity entity = (TileEntity) entityIn;
-              player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 200 / 3, 0));
+
+    public void Regeneration(World worldIn, Entity entityIn) {
+        if (!worldIn.isRemote) {
+            try {
+                EntityPlayer player = (EntityPlayer) entityIn; // обработка игрока
+                Entity entity = (Entity) entityIn;
+                //  TileEntity entity = (TileEntity) entityIn;
+                player.addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, 200 / 3, 1));
+                player.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 200 / 3, 1));
 
 
-          } catch (Exception e) {
-          try{
-              EntityLiving entityLiving = (EntityLiving) entityIn;
-              entityLiving.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 200 / 3, 0));
-          }catch (Exception es){
+            } catch (Exception e) {
+                try {
+                    //EntityLiving entityLiving = (EntityLiving) entityIn;
+                    //entityLiving.addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, 200 / 3, 1));
+                    //   entityLiving.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 200 / 3, 1));
+                } catch (Exception es) {
 
-          }
+                }
 
 
-
-          }
-      }
+            }
+        }
     }
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-Regeneration(worldIn,entityIn);
-
-
-
+        Regeneration(worldIn, entityIn);
 
 
     }

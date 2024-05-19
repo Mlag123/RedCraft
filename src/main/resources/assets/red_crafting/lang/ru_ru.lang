@@ -28,5 +28,6 @@ tile.red_block.name=Огненный блок
 tile.natural_block.name=Натуральный блок
 tile.machine_upgrade.name=Машина Улучшения
 tile.boykisser_block.name=Блок Бойкиссера
+tile.maxwell_block.name=Максвелл
 
 

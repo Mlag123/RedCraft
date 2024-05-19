@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "/": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "red_crafting:maxwell_block",
+    "count": 1
+  }
+}

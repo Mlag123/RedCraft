@@ -1,16 +1,10 @@
 buildscript {
-
     repositories {
-        maven {
-            url = 'https://maven.minecraftforge.net/'
-        }
+        maven { url = 'https://maven.minecraftforge.net/' }
         mavenCentral()
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
-
-
-
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 
@@ -73,8 +67,8 @@ dependencies {
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
     //   compile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
-    compile fileTree(dir: './libs/', include: ['RedStoneFlux.jar'])
-    compile fileTree(dir: './libs/', include: ['timecore.jar'])
+   // compile fileTree(dir: './libs/', include: ['RedStoneFlux.jar'])
+  //  compile fileTree(dir: './libs/', include: ['timecore.jar'])
     //deobfCompile "cofh:RedstoneFlux:1.12-2.0.0.1:universal"
 
 
@@ -123,10 +117,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/http://maven.covers1624.net"
-            name = "CoFH Maven"
-            url = "http://maven.covers1624.net"
-
+      
         }
     }
 }
@@ -138,6 +129,8 @@ idea {
 
     }
 }
+
+//project.classes.dependsOn(prepareAssets)
 task prepareAssets(type: Copy) {
     group = 'build'
     from project.file('src/main/resources')
@@ -149,5 +142,14 @@ task moveResources {
                 todir: "${buildDir}/classes/java"
     }
 }
+
+
+
+
+sourceSets {
+    main.java.srcDirs = ['src/main/java']
+    main.resources.srcDirs = ['src/main/resources']
+}
+
 moveResources.dependsOn processResources
 classes.dependsOn moveResources

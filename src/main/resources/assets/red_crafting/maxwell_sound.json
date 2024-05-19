@@ -1,0 +1,6 @@
+{
+    "maxwell_sound": {
+        "category": "player",
+        "sounds": ["red_crafting/music/maxwell_sound"]
+    }
+}

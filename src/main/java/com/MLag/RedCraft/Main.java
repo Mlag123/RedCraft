@@ -6,7 +6,9 @@ import com.MLag.RedCraft.Proxy.CommonProxy;
 import com.MLag.RedCraft.client.GUI.GUITest;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
 import com.MLag.RedCraft.utils.Handlers.TextureLoader;
+import com.MLag.RedCraft.utils.Sound;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -39,19 +41,23 @@ public class Main {
     //главный класс
     @Deprecated
     public static ResourceLocation GUITexture;
+    public static Sound sound;
 
     @Mod.Instance(MODID)
     public static Main instance;
     Logger log = LogManager.getLogger();
     public static ResourceLocation reca = new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj");
+
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
 
-      //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
+        //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
         TextureLoader textureLoader = new TextureLoader();
         EntityInit.registerEnitiyes();
-
+        MinecraftForge.EVENT_BUS.register(new Sound());
+        sound = new Sound();
         // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
 

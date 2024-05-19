@@ -15,7 +15,11 @@ public class ItemsRegisters {
     //так же, как и в BlocksRehisters
     //materials
     public static final Item.ToolMaterial RED_MATERIAL = EnumHelper.addToolMaterial("red_crafting", 5, 2000, 15.0F, 4.0F, 12);
+    public static final Item.ToolMaterial FIRE_MATERIAL = EnumHelper.addToolMaterial("fire_material", 5, 25000, 15.0F, 4.0F, 12);
+
     public static final ItemArmor.ArmorMaterial RED_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("red_crafting:red_armor", "red_crafting:red_armor", 15, new int[]{2, 6, 5, 3}, 7, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
+
+
 
     //Item.ToolMaterial AXE_RED_MATERIAL = EnumHelper.addToolMaterial("red_crafting",5,2000,15.0F,8.0F,10);
     public static final ArrayList<Item> Items_Arrays = new ArrayList<Item>();
@@ -43,6 +47,8 @@ public class ItemsRegisters {
     public static Item semenItem = new SemenItem("semen_item", CreativeTabsRegister.MATERIALS,1,50f,true);
     public static Item capsuleItem = new CapsuleItem("capsule_item", CreativeTabsRegister.MATERIALS);
     public static Item semenInCapsule = new SemenInCapsuleItem("semen_in_capsule", CreativeTabsRegister.MATERIALS);
+    public static Item cleaner_cat = new CleanerCatItem("cleaner_cat",RED_MATERIAL);
+    public static Item fire_pickaxe = new FirePickaxeItem("fire_pickaxe",FIRE_MATERIAL);
 
 //fixme textures for armor
 
