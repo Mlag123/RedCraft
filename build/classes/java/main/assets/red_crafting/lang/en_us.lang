@@ -14,6 +14,8 @@ item.semen_in_capsule.name=Capsule with semen
 item.capsule_item.name=Empty Capsule
 item.natural_amuelt.name=Natural Amulet (not used)
 item.semen_item.name=Semen
+item.cleaner_cat.name=Cat Brush
+item.fire_pickaxe.name=Super Fire Pickaxe
 
 
 ##blocks
@@ -24,6 +26,7 @@ tile.natural_block.name=Natural Block
 tile.machine_upgrade.name=Machine Upgrader
 tile.boykisser_block.name=Boykisser Block
 tile.maxwell_block.name=Maxwell
+tile.boykisser_happy.name=Happy Silly Cat
 
 
 #tooltabs

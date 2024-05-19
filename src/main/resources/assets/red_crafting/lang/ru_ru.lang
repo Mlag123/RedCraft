@@ -15,6 +15,8 @@ item.semen_in_capsule.name=Капсула с семенем
 item.capsule_item.name=Пустая капсула
 item.natural_amuelt.name=Природный амулет (не используется)
 item.semen_item.name=Семя
+item.cleaner_cat.name=Щётка для кота
+item.fire_pickaxe.name=Супер огненная кирка
 
 
 #tooltabs
@@ -29,5 +31,6 @@ tile.natural_block.name=Натуральный блок
 tile.machine_upgrade.name=Машина Улучшения
 tile.boykisser_block.name=Блок Бойкиссера
 tile.maxwell_block.name=Максвелл
+tile.boykisser_happy.name=Весёлый глупый кот
 
 
