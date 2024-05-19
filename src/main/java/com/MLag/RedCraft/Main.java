@@ -41,23 +41,24 @@ public class Main {
     //главный класс
     @Deprecated
     public static ResourceLocation GUITexture;
-    public static Sound sound;
+  //  public static Sound sound;
 
     @Mod.Instance(MODID)
     public static Main instance;
     Logger log = LogManager.getLogger();
-    public static ResourceLocation reca = new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj");
+ //   public static ResourceLocation reca = new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj");
 
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit(event);
         log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
 
         //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
         TextureLoader textureLoader = new TextureLoader();
         EntityInit.registerEnitiyes();
-        MinecraftForge.EVENT_BUS.register(new Sound());
-        sound = new Sound();
+
+       // sound = new Sound();
         // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
 

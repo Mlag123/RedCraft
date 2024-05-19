@@ -23,7 +23,8 @@ public class MaxwellBlock extends CatBlockBase {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        worldIn.playSound(playerIn,pos,Sound.maxwell_sound,SoundCategory.BLOCKS,1.0f,1.0f);
+       worldIn.playSound(playerIn,pos,Sound.maxwell_sound,SoundCategory.PLAYERS,1.0f,1.0f);
+
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
     }
 }

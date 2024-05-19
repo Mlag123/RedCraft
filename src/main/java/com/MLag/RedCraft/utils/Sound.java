@@ -8,22 +8,28 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
+import javax.swing.*;
+
+import static com.MLag.RedCraft.Main.MODID;
 
 
 public class Sound {
 
-    public static final SoundEvent  maxwell_sound = regisrty("maxwell_sound");
+    public static  SoundEvent  maxwell_sound;
 
     @SubscribeEvent
     public void registerSound(RegistryEvent.Register<SoundEvent> e){
-        ForgeRegistries.SOUND_EVENTS.register(maxwell_sound);
+        maxwell_sound = regisrty("maxwell_sound");
 
 
     }
-
+    //"red_crafting/"+
     private static SoundEvent regisrty(String name){
         ResourceLocation uniqueName = new ResourceLocation("red_crafting/"+name);
+        SoundEvent event = new SoundEvent(uniqueName);
+        event.setRegistryName(name);
+        ForgeRegistries.SOUND_EVENTS.register(event);
 
-        return new SoundEvent(uniqueName).setRegistryName(uniqueName);
+        return event;
     }
 }

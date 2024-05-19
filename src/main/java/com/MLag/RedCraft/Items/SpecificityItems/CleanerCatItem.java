@@ -1,7 +1,9 @@
 package com.MLag.RedCraft.Items.SpecificityItems;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
+import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Items.ItemsRegisters;
+import com.MLag.RedCraft.Main;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
@@ -10,7 +12,7 @@ import net.minecraft.item.ItemTool;
 
 import java.util.Set;
 
-public class CleanerCatItem extends ItemTool {
+public class CleanerCatItem extends ItemTool implements IHasModel {
 
 
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(BlocksRegisters.maxwell_block);
@@ -21,5 +23,11 @@ public class CleanerCatItem extends ItemTool {
         setRegistryName(name);
         setCreativeTab(CreativeTabsRegister.TOOL);
         ItemsRegisters.Items_Arrays.add(this);
+    }
+
+    @Override
+    public void registerModels() {
+        Main.proxy.registerItemRenderer(this, 0, "inventory");
+
     }
 }

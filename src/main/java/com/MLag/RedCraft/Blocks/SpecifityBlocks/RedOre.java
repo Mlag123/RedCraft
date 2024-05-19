@@ -36,7 +36,7 @@ public class RedOre extends BlockCreateOre {
               }
           }
       }catch (Exception e){
-          e.printStackTrace();
+
       }
     }
 

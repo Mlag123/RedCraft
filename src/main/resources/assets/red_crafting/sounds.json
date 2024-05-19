@@ -1,0 +1,11 @@
+{
+  "maxwell_sound": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "red_crafting/sounds/maxwell_sound",
+        "stream": true
+      }
+    ]
+  }
+}
