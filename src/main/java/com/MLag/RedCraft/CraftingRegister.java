@@ -8,16 +8,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class CraftingRegister {
-    //регистрация рецептов. fixme crafting recipes registration handler
+    //регистрация рецептов
 
 
     public void register(){
         registerRecipes("red_crafting");
     }
     private void registerRecipes(String name){
-
-
-
        CraftingHelper.register(new ResourceLocation("red_crafting", name), (IRecipeFactory) (context, json) -> CraftingHelper.getRecipe(json, context));
 
     }

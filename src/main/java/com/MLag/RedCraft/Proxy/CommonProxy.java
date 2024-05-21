@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import javax.swing.*;
 
 public class CommonProxy {
+
+    //серверая сторона
     BlockRegistationHandler BlockReg = new BlockRegistationHandler();
 
     public void registerItemRenderer(Item item, int meta, String id) {

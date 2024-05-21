@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class FurnanceRegistrarion {
-//создание рецептов под печку.
+//класс регистраций и создание рецептов под печку.
     public static void FurnanceRegistarion() {
 
         GameRegistry.addSmelting(BlocksRegisters.Red_ore, new ItemStack(ItemsRegisters.red_ingot), 10f);

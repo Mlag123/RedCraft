@@ -12,7 +12,11 @@ import java.util.ArrayList;
 
 public class ItemsRegisters {
 
-    //так же, как и в BlocksRehisters
+    //Класс с динамическим массивом предметов, и обьявления их статической переменной типа Item;
+    /*
+    Пример:
+    public static final Item item = new CustomItem("тут тип аргументы"); С блоками так же.
+         */
     //materials
     public static final Item.ToolMaterial RED_MATERIAL = EnumHelper.addToolMaterial("red_crafting", 5, 2000, 15.0F, 4.0F, 12);
     public static final Item.ToolMaterial FIRE_MATERIAL = EnumHelper.addToolMaterial("fire_material", 5, 25000, 15.0F, 4.0F, 12);

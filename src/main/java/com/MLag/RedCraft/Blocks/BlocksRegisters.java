@@ -13,7 +13,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import java.util.ArrayList;
 
 public class BlocksRegisters {
-
+    //Класс с массивом блоков, и их созданием.
     //массив<block>, там хранятся блоки, которые идут
     // в BlockRegistrationHandler (регистрируются)
     public static final ArrayList<Block> BLOCKS_ARRAY = new ArrayList<>();

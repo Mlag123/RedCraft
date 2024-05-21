@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class CatBlockBase extends BlockCreate {
-
+    //Это класс для создание любых блоков с json моделью, тут реализована поворот блока, в зависимости от положение player.angle игрока.
     public PropertyDirection FACING = BlockHorizontal.FACING;
 
     public CatBlockBase(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {

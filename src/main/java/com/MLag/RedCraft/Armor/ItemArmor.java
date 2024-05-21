@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
 
 public class ItemArmor extends net.minecraft.item.ItemArmor {
+
+    //броня, что логично по названию классов
     public ItemArmor(String Name,ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         this.setUnlocalizedName(Name);

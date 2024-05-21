@@ -14,7 +14,7 @@ import static com.MLag.RedCraft.Main.MODID;
 
 
 public class Sound {
-
+//Класс для регистрации звуков.
     public static  SoundEvent  maxwell_sound;
 
     @SubscribeEvent

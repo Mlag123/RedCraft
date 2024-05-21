@@ -13,17 +13,8 @@ public class BlockCreateOre extends BlockOre {
     private boolean EntityPlayerDamageFire = false;
     private int setLightingLevel = 0;
 
-    //шаблок создания рудного блога
-/*    public BlockCreateOre(String name, boolean EntityPlayerDamageFire) {
-        super();
-        this.setUnlocalizedName(name);
-        this.setRegistryName(name);
-        this.setHardness(3);
-        this.setLightOpacity(setLightingLevel);
-        this.setCreativeTab(CreativeTabsRegister.BLOCKS);
-        BlocksRegisters.BLOCKS_ARRAY.add(this);
+    //шаблок создания рудного блока (который генерируется по миру в земле)
 
-    }*/
 
     public BlockCreateOre(String name) {
         super();

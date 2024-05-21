@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import static com.MLag.RedCraft.Constants.MODIDS;
 
 public class TextureLoader {
-
+//Класс для регистрации ResourceLocation объектов
     public static ResourceLocation MachineTextureGui;
     public static ResourceLocation modelBoyKisserOBJ;
     public TextureLoader(){

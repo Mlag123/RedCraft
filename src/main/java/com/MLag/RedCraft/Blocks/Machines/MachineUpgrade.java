@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 import static com.MLag.RedCraft.Main.GUITexture;
 
-@Deprecated
+
 public class MachineUpgrade extends Block implements MachineCreated {
 
 

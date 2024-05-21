@@ -14,8 +14,8 @@ import static com.MLag.RedCraft.Constants.MODIDS;
 
 public class ClientProxy extends CommonProxy
 {
-    //клиентская сторона//fixme рефактор
-    // FIXME: 26.04.2023 Допилить классы ClientProxy и CommonProxy
+    //клиентская сторона
+
     public void registerItemRenderer(Item item, int meta, String id) {
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), id));
 
