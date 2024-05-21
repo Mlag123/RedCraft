@@ -3,7 +3,7 @@ Implementation-Title: RedCraft
 Implementation-Version: 1.0
 Specification-Vendor: examplemodsareus
 Specification-Title: examplemod
-Implementation-Timestamp: 2024-05-20T01:55:09+0700
+Implementation-Timestamp: 2024-05-21T09:02:17+0700
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 

@@ -29,7 +29,6 @@ public class Main {
     public static final String NAME = "Red Crafting";
     public static final String VERSION = "1.0";
 
-    private static Logger logger;
     public static final String CLIENT = "com.MLag.RedCraft.Proxy.ClientProxy";
     public static final String COMMON = "com.MLag.RedCraft.Proxy.CommonProxy";
 
@@ -41,7 +40,7 @@ public class Main {
     //главный класс
     @Deprecated
     public static ResourceLocation GUITexture;
-  //  public static Sound sound;
+
 
     @Mod.Instance(MODID)
     public static Main instance;
@@ -54,11 +53,8 @@ public class Main {
         proxy.preInit(event);
         log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
 
-        //  GUITest.SetTextureTest(new ResourceLocation(MODIDS+":textures/block/boykisser_block.png"));
         TextureLoader textureLoader = new TextureLoader();
         EntityInit.registerEnitiyes();
-
-       // sound = new Sound();
         // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
 

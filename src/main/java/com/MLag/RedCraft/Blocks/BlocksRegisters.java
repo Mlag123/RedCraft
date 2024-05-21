@@ -31,7 +31,9 @@ public class BlocksRegisters {
     //public static Block super_chest = new SuperChest("super_chest", BlockChest.Type.BASIC);
     //Block BkisserKiss = new BKisserKissBlock("boykisserkiss_block", Material.IRON, 5f, CreativeTabsRegister.BLOCKS, SoundType.GLASS);
     public static final Block maxwell_block = new MaxwellBlock("maxwell_block", Material.GROUND, 3f, CreativeTabsRegister.BLOCKS, SoundType.SNOW);
-public static final Block boykisser_happy = new BoykisserHappy("boykisser_happy",Material.GROUND,3f, CreativeTabsRegister.BLOCKS,SoundType.SNOW);
+    public static final Block boykisser_happy = new BoykisserHappy("boykisser_happy",Material.GROUND,3f, CreativeTabsRegister.BLOCKS,SoundType.SNOW);
+    public static final Block boykisser_smile = new BoykisserSmile("boykisser_smile",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
+    public static final Block boykisser_sad = new BoykisserSad("boykisser_sad",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
     public BlocksRegisters() {
 
     }

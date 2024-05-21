@@ -1,0 +1,9 @@
+{
+    "variants": {
+  "facing=east":  { "model": "red_crafting:boykisser_smile", "y": 90  },
+    "facing=west":   { "model": "red_crafting:boykisser_smile", "y": 270 },
+    "facing=south":   { "model": "red_crafting:boykisser_smile", "y": 180},
+    "facing=north": { "model": "red_crafting:boykisser_smile"}
+
+    }
+}
