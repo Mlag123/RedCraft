@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedCraft.iml" filepath="$PROJECT_DIR$/.idea/modules/RedCraft.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedCraft.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RedCraft.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedCraft.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RedCraft.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.MLag.red_crafting.RedCraft.main.iml" />
