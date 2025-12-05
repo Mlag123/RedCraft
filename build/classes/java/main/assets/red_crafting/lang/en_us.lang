@@ -27,6 +27,9 @@ tile.machine_upgrade.name=Machine Upgrader
 tile.boykisser_block.name=Boykisser Block
 tile.maxwell_block.name=Maxwell
 tile.boykisser_happy.name=Happy Silly Cat
+tile.boykisser_smile.name=Smile Silly Cat
+tile.boykisser_sad.name=Sad Silly Cat
+
 
 
 #tooltabs

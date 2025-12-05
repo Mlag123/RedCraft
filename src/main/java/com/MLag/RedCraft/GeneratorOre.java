@@ -18,15 +18,21 @@ public class GeneratorOre implements IWorldGenerator {
 //Рудный генератор, и не только.
 
 
+    private static final int NETHER = -1;
+    private static final int WORLD = 0;
+    private static final int END = 1;
+
+
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch (world.provider.getDimension()) {
-            case -1:
+            case NETHER:
+                runGenerator(BlocksRegisters.Red_ore.getDefaultState(), 8, 2, 2, 20, BlockMatcher.forBlock(Blocks.NETHERRACK), world, random, chunkX, chunkZ);
+
                 break;
-            case 0:
-                runGenerator(BlocksRegisters.Red_ore.getDefaultState(), 8, 8, 2, 16, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
-                runGenerator(BlocksRegisters.Natural_ore.getDefaultState(), 8, 8, 2, 16, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
-                runGenerator(BlocksRegisters.FossilizedRemainsOre.getDefaultState(),8,8,2,56,BlockMatcher.forBlock(Blocks.STONE),world,random,chunkX,chunkZ);
+            case WORLD:
+                runGenerator(BlocksRegisters.Natural_ore.getDefaultState(), 8, 3, 2, 16, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
+                //runGenerator(BlocksRegisters.FossilizedRemainsOre.getDefaultState(),8,8,2,56,BlockMatcher.forBlock(Blocks.STONE),world,random,chunkX,chunkZ);
                 break;
         }
 

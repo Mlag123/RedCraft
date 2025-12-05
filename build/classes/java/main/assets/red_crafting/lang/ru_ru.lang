@@ -32,5 +32,7 @@ tile.machine_upgrade.name=Машина Улучшения
 tile.boykisser_block.name=Блок Бойкиссера
 tile.maxwell_block.name=Максвелл
 tile.boykisser_happy.name=Весёлый глупый кот
+tile.boykisser_smile.name=Улыбающийся глупый кот
+tile.boykisser_sad.name=Грустный глупый кот
 
 

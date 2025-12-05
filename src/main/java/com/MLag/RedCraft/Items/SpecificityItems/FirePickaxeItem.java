@@ -7,9 +7,12 @@ import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
+import net.minecraft.block.BlockLeaves;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
@@ -131,8 +134,89 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
         Material material = state.getMaterial();
         return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
+
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
+    }
+
+    @Override
+    public boolean onBlockDestroyed(ItemStack itemStack, World inWorld, IBlockState blockState, BlockPos blockpos, EntityLivingBase entityLivingBase) {
+
+        if (!inWorld.isRemote && entityLivingBase instanceof EntityPlayer) {
+
+            EntityPlayer player = (EntityPlayer) entityLivingBase;
+
+            EnumFacing facing = player.getHorizontalFacing();
+
+            Block block = blockState.getBlock();
+
+            if (!player.isSneaking()) {
+
+
+                if (facing.equals(EnumFacing.SOUTH) || facing.equals(EnumFacing.NORTH)) {
+
+                    for (int dx = -1; dx <= 1; dx++) {
+                        for (int dy = -1; dy <= 1; dy++) {
+                            BlockPos newPos = blockpos.add(dx, dy, 0);
+                            if (!newPos.equals(blockpos)) {
+                                IBlockState targetState = inWorld.getBlockState(newPos);
+                                if (!targetState.getBlock().isAir(targetState, inWorld, newPos)) {
+
+                                    if (targetState.getMaterial() == Material.ROCK
+                                            || targetState == Blocks.IRON_BLOCK
+                                            || targetState == Blocks.GOLD_BLOCK
+                                            || targetState == Blocks.DIAMOND_ORE
+                                            || targetState == Blocks.COAL_ORE
+                                            || targetState == Blocks.EMERALD_ORE
+                                            || targetState == Blocks.LAPIS_ORE
+                                            || targetState == Blocks.REDSTONE_ORE
+                                            || targetState == Blocks.STONE
+                                            || targetState == Blocks.COBBLESTONE
+                                            || targetState.getMaterial() == Material.GROUND
+                                            || targetState == Blocks.GRAVEL
+                                            || targetState == Blocks.DIRT)
+
+                                    {
+                                        inWorld.destroyBlock(newPos, true);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                } else if (facing.equals(EnumFacing.WEST) || facing.equals(EnumFacing.EAST)) {
+                    for (int dx = -1; dx <= 1; dx++) {
+                        for (int dy = -1; dy <= 1; dy++) {
+                            BlockPos newPos = blockpos.add(0, dy, dx);
+                            if (!newPos.equals(blockpos)) {
+                                IBlockState targetState = inWorld.getBlockState(newPos);
+                                if (!targetState.getBlock().isAir(targetState, inWorld, newPos)) {
+
+                                    if (targetState.getMaterial() == Material.ROCK
+                                            || targetState == Blocks.IRON_BLOCK
+                                            || targetState == Blocks.GOLD_BLOCK
+                                            || targetState == Blocks.DIAMOND_ORE
+                                            || targetState == Blocks.COAL_ORE
+                                            || targetState == Blocks.EMERALD_ORE
+                                            || targetState == Blocks.LAPIS_ORE
+                                            || targetState == Blocks.REDSTONE_ORE
+                                            || targetState == Blocks.STONE
+                                            || targetState == Blocks.COBBLESTONE
+                                            || targetState.getMaterial() == Material.GROUND
+                                            || targetState == Blocks.GRAVEL
+                                            || targetState == Blocks.DIRT) {
+                                        inWorld.destroyBlock(newPos, true);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return super.onBlockDestroyed(itemStack, inWorld, blockState, blockpos, entityLivingBase);
     }
 }

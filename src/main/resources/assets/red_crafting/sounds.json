@@ -1,10 +1,18 @@
 {
   "maxwell_sound": {
-    "category": "player",
+    "subtitle": "subtitles.music",
     "sounds": [
       {
-        "name": "red_crafting/sounds/maxwell_sound",
-        "stream": true
+        "name": "red_crafting:maxwell_sound"
+      }
+    ]
+  },
+  
+  "maxwell_meow": {
+    "subtitle": "subtitles.meow",
+    "sounds": [
+      {
+        "name": "red_crafting:maxwell_meow"
       }
     ]
   }

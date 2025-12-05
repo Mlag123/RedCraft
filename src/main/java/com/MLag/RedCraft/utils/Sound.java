@@ -1,35 +1,25 @@
 package com.MLag.RedCraft.utils;
 
-import net.minecraft.init.SoundEvents;
+import com.MLag.RedCraft.Main;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-
-import javax.swing.*;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import static com.MLag.RedCraft.Main.MODID;
 
-
+@Mod.EventBusSubscriber
 public class Sound {
-//Класс для регистрации звуков.
-    public static  SoundEvent  maxwell_sound;
+
+    public static final SoundEvent MAXWELL_SOUND = new SoundEvent(new ResourceLocation(MODID, "maxwell_sound"))
+            .setRegistryName(MODID, "maxwell_sound");
+
+    public static final SoundEvent MAXWELL_MEOW = new SoundEvent(new ResourceLocation(MODID,"maxwell_meow")).setRegistryName(MODID,"maxwell_sound");
 
     @SubscribeEvent
-    public void registerSound(RegistryEvent.Register<SoundEvent> e){
-        maxwell_sound = regisrty("maxwell_sound");
-
-
-    }
-    //"red_crafting/"+
-    private static SoundEvent regisrty(String name){
-        ResourceLocation uniqueName = new ResourceLocation("red_crafting/"+name);
-        SoundEvent event = new SoundEvent(uniqueName);
-        event.setRegistryName(name);
-        ForgeRegistries.SOUND_EVENTS.register(event);
-
-        return event;
+    public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+      event.getRegistry().register(MAXWELL_SOUND);
     }
 }

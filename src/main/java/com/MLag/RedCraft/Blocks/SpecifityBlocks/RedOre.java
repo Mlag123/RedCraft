@@ -1,11 +1,13 @@
 package com.MLag.RedCraft.Blocks.SpecifityBlocks;
 
 import com.MLag.RedCraft.Blocks.BlockCreateOre;
+import com.MLag.RedCraft.Main;
 import com.google.common.base.Predicate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
@@ -28,16 +30,28 @@ public class RedOre extends BlockCreateOre {
     }
 
     public static void fireAttack(Entity entityIn) {
-      try {  // FIXME: 06.09.2023
-          EntityPlayer entityPlayer = (EntityPlayer) entityIn;
-          if (entityPlayer.getHealth() >= 1f) {
-              if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
-                  entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
-              }
-          }
-      }catch (Exception e){
+        // FIXME: 06.09.2023
 
-      }
+        try {
+
+
+            if(entityIn instanceof EntityMob){
+                entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
+            }else if(entityIn instanceof EntityPlayer){
+                EntityPlayer entityPlayer = (EntityPlayer) entityIn;
+                if (entityPlayer.getHealth() >= 1f) {
+                    if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
+                        entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
+                    }
+                }
+            }
+
+
+
+        } catch (Exception e) {
+                Main.log.error(e);
+        }
+
     }
 
     @Override

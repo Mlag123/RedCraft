@@ -1,13 +1,13 @@
 package com.MLag.RedCraft;
 
-import com.MLag.RedCraft.Entitiyes.EntityInit;
-import com.MLag.RedCraft.Entitiyes.InitEntity;
+
 import com.MLag.RedCraft.Proxy.CommonProxy;
 import com.MLag.RedCraft.client.GUI.GUITest;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
 import com.MLag.RedCraft.utils.Handlers.TextureLoader;
 import com.MLag.RedCraft.utils.Sound;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -42,9 +42,11 @@ public class Main {
     public static ResourceLocation GUITexture;
 
 
+    /// sounds
+
     @Mod.Instance(MODID)
     public static Main instance;
-    Logger log = LogManager.getLogger();
+   public static Logger log = LogManager.getLogger();
  //   public static ResourceLocation reca = new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj");
 
 
@@ -54,9 +56,9 @@ public class Main {
         log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
 
         TextureLoader textureLoader = new TextureLoader();
-        EntityInit.registerEnitiyes();
         // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
+        
 
         BlockReg.registerRender();
         FurnanceRegistrarion.FurnanceRegistarion();
