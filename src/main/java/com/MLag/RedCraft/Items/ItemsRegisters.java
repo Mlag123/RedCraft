@@ -1,5 +1,6 @@
 package com.MLag.RedCraft.Items;
 
+import com.MLag.RedCraft.Blocks.BlocksRegisters;
 import com.MLag.RedCraft.Items.SpecificityItems.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.init.SoundEvents;
@@ -53,6 +54,7 @@ public class ItemsRegisters {
     public static Item semenInCapsule = new SemenInCapsuleItem("semen_in_capsule", CreativeTabsRegister.MATERIALS);
     public static Item cleaner_cat = new CleanerCatItem("cleaner_cat",RED_MATERIAL);
     public static Item fire_pickaxe = new FirePickaxeItem("fire_pickaxe",FIRE_MATERIAL);
+
 
 //fixme textures for armor
 

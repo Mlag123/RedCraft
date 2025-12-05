@@ -52,8 +52,8 @@ public class Main {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+
         proxy.preInit(event);
-        log.info(new ResourceLocation(MODIDS + ":models/entity/boyKisserModel.obj").getResourcePath());
 
         TextureLoader textureLoader = new TextureLoader();
         // FIXME: 21.01.2024    InitEntity i = new InitEntity();

@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 //шаблок создание простого блока
-public class BlockCreate extends Block {
+public class  BlockCreate extends Block {
 
     private boolean EntityPlayerDamageFire = false;
 

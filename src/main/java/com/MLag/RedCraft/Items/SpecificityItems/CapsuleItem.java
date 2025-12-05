@@ -34,26 +34,27 @@ public class CapsuleItem extends ItemCreate {
     }
 
     Logger log;
-@SideOnly(Side.CLIENT) // FIXME: 21.01.2024 
+
+    @SideOnly(Side.CLIENT) // FIXME: 21.01.2024
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         float player_health = playerIn.getHealth();
-    if(!playerIn.capabilities.isCreativeMode){
-        if(player_health>11){
-            playerIn.sendMessage(new TextComponentString("Ooowh! I am cumming, BoyKisser, i love you!"));
-            if (!playerIn.isImmuneToFire() && playerIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) playerIn)) {
-                playerIn.attackEntityFrom(DamageSource.OUT_OF_WORLD,10);
-             playerIn.inventory.clearMatchingItems(new ItemStack(ItemsRegisters.capsuleItem).getItem(),0,1, null);
-                playerIn.addItemStackToInventory(new ItemStack(ItemsRegisters.semenInCapsule));
-                playerIn.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,500));
+        if (!playerIn.capabilities.isCreativeMode) {
+            if (player_health > 11) {
+                playerIn.sendMessage(new TextComponentString("Ooowh! I am cumming, BoyKisser, i love you!"));
+                if (!playerIn.isImmuneToFire() && playerIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) playerIn)) {
+                    playerIn.attackEntityFrom(DamageSource.OUT_OF_WORLD, 10);
+                    playerIn.inventory.clearMatchingItems(new ItemStack(ItemsRegisters.capsuleItem).getItem(), 0, 1, null);
+                    playerIn.addItemStackToInventory(new ItemStack(ItemsRegisters.semenInCapsule));
+                    playerIn.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 500));
 
+                }
+            } else {
+                playerIn.sendMessage(new TextComponentString("I can't cumming, i have a low health"));
             }
-        }else {
-            playerIn.sendMessage(new TextComponentString("I can't cumming, i have a low health"));
+        } else {
+            playerIn.sendMessage(new TextComponentString("You're being creative, you little pervert."));
         }
-    }else{
-        playerIn.sendMessage(new TextComponentString("You're being creative, you little pervert."));
-    }
 //        log.info("Semen Click, player health " + player_health);
         return super.onItemRightClick(worldIn, playerIn, handIn);
 

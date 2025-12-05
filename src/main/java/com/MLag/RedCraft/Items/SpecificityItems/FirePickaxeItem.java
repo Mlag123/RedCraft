@@ -163,6 +163,15 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
                                 IBlockState targetState = inWorld.getBlockState(newPos);
                                 if (!targetState.getBlock().isAir(targetState, inWorld, newPos)) {
 
+
+                                    {
+                                        if (targetState.getBlock() == Blocks.BEDROCK) {
+                                            continue; // пропускаем бедрок
+                                        }
+                                        inWorld.destroyBlock(newPos, true);
+                                    }
+
+
                                     if (targetState.getMaterial() == Material.ROCK
                                             || targetState == Blocks.IRON_BLOCK
                                             || targetState == Blocks.GOLD_BLOCK
@@ -178,6 +187,7 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
                                             || targetState == Blocks.DIRT)
 
                                     {
+
                                         inWorld.destroyBlock(newPos, true);
                                     }
 
@@ -192,6 +202,14 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
                             if (!newPos.equals(blockpos)) {
                                 IBlockState targetState = inWorld.getBlockState(newPos);
                                 if (!targetState.getBlock().isAir(targetState, inWorld, newPos)) {
+
+                                    {
+                                        if (targetState.getBlock() == Blocks.BEDROCK) {
+                                            continue; // пропускаем бедрок
+                                        }
+                                        inWorld.destroyBlock(newPos, true);
+                                    }
+
 
                                     if (targetState.getMaterial() == Material.ROCK
                                             || targetState == Blocks.IRON_BLOCK
