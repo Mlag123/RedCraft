@@ -1,28 +1,28 @@
 package com.MLag.RedCraft.Containers;
 
-import com.MLag.RedCraft.Tiles.TestTileBlock;
+import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import com.MLag.RedCraft.client.GUI.Slots.OutputRedMachineSlot;
 import com.MLag.RedCraft.client.GUI.Slots.RedIngotInSlot;
 import com.MLag.RedCraft.client.GUI.Slots.RedMachineSlotIn;
-import com.MLag.RedCraft.client.GUI.Slots.RedStoneInSlot;
+import com.MLag.RedCraft.client.GUI.Slots.LeftInSlot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class TestCustomContainer extends Container {
+public class FireCraftingTableContainer extends Container {
 
-    private final TestTileBlock te;
+    private final FiteTileCraftingTableBlock te;
 
     private int cook,totalTime;
 
-    public TestCustomContainer(InventoryPlayer playerInv, TestTileBlock te) {
+    public FireCraftingTableContainer(InventoryPlayer playerInv, FiteTileCraftingTableBlock te) {
         // Слоты 3×3
         this.te = te;
        this.addSlotToContainer(new RedMachineSlotIn(te,0,47,9));
        this.addSlotToContainer(new RedIngotInSlot(te,1,47,47));
-       this.addSlotToContainer(new RedStoneInSlot(te,2,8,28));
+       this.addSlotToContainer(new LeftInSlot(te,2,8,28));
        this.addSlotToContainer(new OutputRedMachineSlot(te,3,92,28));
 
         // Слоты игрока

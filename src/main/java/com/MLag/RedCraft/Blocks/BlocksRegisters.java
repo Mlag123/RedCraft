@@ -1,5 +1,6 @@
 package com.MLag.RedCraft.Blocks;
 
+import com.MLag.RedCraft.Blocks.Machines.FireCraftingTableBlock;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.Block;
@@ -29,7 +30,7 @@ public class BlocksRegisters {
     public static final Block boykisser_happy = new BoykisserHappy("boykisser_happy",Material.GROUND,3f, CreativeTabsRegister.BLOCKS,SoundType.SNOW);
     public static final Block boykisser_smile = new BoykisserSmile("boykisser_smile",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
     public static final Block boykisser_sad = new BoykisserSad("boykisser_sad",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
-    public static final Block test_custom_craftable_block = new TestCustomBlock("test_crafting",Material.IRON,3f,CreativeTabsRegister.BLOCKS,SoundType.METAL);
+    public static final Block test_custom_craftable_block = new FireCraftingTableBlock("fire_craftingtable",Material.IRON,3f,CreativeTabsRegister.BLOCKS,SoundType.METAL);
     public BlocksRegisters() {
 
     }

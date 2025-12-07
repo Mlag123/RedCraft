@@ -1,8 +1,8 @@
-package com.MLag.RedCraft.Blocks.SpecifityBlocks;
+package com.MLag.RedCraft.Blocks.Machines;
 
 import com.MLag.RedCraft.Blocks.BlockCreate;
 import com.MLag.RedCraft.Main;
-import com.MLag.RedCraft.Tiles.TestTileBlock;
+import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -17,8 +17,8 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class TestCustomBlock extends BlockCreate implements ITileEntityProvider {
-    public TestCustomBlock(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
+public class FireCraftingTableBlock extends BlockCreate implements ITileEntityProvider {
+    public FireCraftingTableBlock(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
         super(name, material, setHardness, creativeTabs, soundType);
     }
 
@@ -34,6 +34,6 @@ public class TestCustomBlock extends BlockCreate implements ITileEntityProvider 
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TestTileBlock();
+        return new FiteTileCraftingTableBlock();
     }
 }

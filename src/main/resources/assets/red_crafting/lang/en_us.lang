@@ -36,3 +36,5 @@ tile.boykisser_sad.name=Sad Silly Cat
 itemGroup.tool_tabs=Tools RedCraft
 itemGroup.red_tabs=Blocks RedCraft
 itemGroup.red_materials=Materials RedCraft
+itemGroup.red_combat=Combat RedCraft
+

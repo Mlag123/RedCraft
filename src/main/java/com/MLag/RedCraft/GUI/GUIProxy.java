@@ -1,7 +1,7 @@
 package com.MLag.RedCraft.GUI;
 
-import com.MLag.RedCraft.Containers.TestCustomContainer;
-import com.MLag.RedCraft.Tiles.TestTileBlock;
+import com.MLag.RedCraft.Containers.FireCraftingTableContainer;
+import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -14,7 +14,7 @@ public class GUIProxy implements IGuiHandler {
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         if(ID ==0){
-            return new TestCustomContainer(player.inventory,(TestTileBlock) world.getTileEntity(new BlockPos(x,y,z)));
+            return new FireCraftingTableContainer(player.inventory,(FiteTileCraftingTableBlock) world.getTileEntity(new BlockPos(x,y,z)));
         }
         return null;
     }
@@ -22,8 +22,8 @@ public class GUIProxy implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         if(ID == 0){
-            TestCustomContainer container = new TestCustomContainer(player.inventory,
-                    (TestTileBlock) world.getTileEntity(new BlockPos(x,y,z)));
+            FireCraftingTableContainer container = new FireCraftingTableContainer(player.inventory,
+                    (FiteTileCraftingTableBlock) world.getTileEntity(new BlockPos(x,y,z)));
             return new TestCustomGUI(container); // Только один аргумент
         }
         return null;

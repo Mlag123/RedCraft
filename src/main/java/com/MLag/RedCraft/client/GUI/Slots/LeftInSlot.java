@@ -5,8 +5,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class RedStoneInSlot extends Slot {
-    public RedStoneInSlot(IInventory inventoryIn, int index, int xPosition, int yPosition) {
+public class LeftInSlot extends Slot {
+    public LeftInSlot(IInventory inventoryIn, int index, int xPosition, int yPosition) {
         super(inventoryIn, index, xPosition, yPosition);
     }
 
@@ -17,7 +17,7 @@ public class RedStoneInSlot extends Slot {
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        if (!(stack.getItem() == Items.REDSTONE)){
+        if (!(stack.getItem() == Items.BLAZE_POWDER)){
             return false;
         }
         return true;

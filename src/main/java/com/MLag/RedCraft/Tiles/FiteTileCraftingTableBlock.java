@@ -5,15 +5,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 
-public class TestTileBlock extends TileEntity implements IInventory, ITickable {
+public class FiteTileCraftingTableBlock extends TileEntity implements IInventory, ITickable {
 
     private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
 
@@ -31,38 +28,37 @@ public class TestTileBlock extends TileEntity implements IInventory, ITickable {
         if (in_tool.isEmpty() || in_redstone.isEmpty()||in_redIngot.isEmpty()) return;
 
 
-        if (in_tool.getItem() == Items.DIAMOND_PICKAXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.REDSTONE){
+        if (in_tool.getItem() == Items.DIAMOND_PICKAXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
             items.set(3,new ItemStack(ItemsRegisters.Red_Pickaxe));
             in_tool.shrink(1);
             in_redstone.shrink(1);
             in_redIngot.shrink(1);
             markDirty();
-        } else   if (in_tool.getItem() == Items.DIAMOND_SHOVEL  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.REDSTONE){
+        } else   if (in_tool.getItem() == Items.DIAMOND_SHOVEL  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
             items.set(3,new ItemStack(ItemsRegisters.red_spade));
             in_tool.shrink(1);
             in_redstone.shrink(1);
             in_redIngot.shrink(1);
             markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_SWORD  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.REDSTONE){
+        }else   if (in_tool.getItem() == Items.DIAMOND_SWORD  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
             items.set(3,new ItemStack(ItemsRegisters.red_Sword));
             in_tool.shrink(1);
             in_redstone.shrink(1);
             in_redIngot.shrink(1);
             markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_AXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.REDSTONE){
+        }else   if (in_tool.getItem() == Items.DIAMOND_AXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
             items.set(3,new ItemStack(ItemsRegisters.Red_Axe));
             in_tool.shrink(1);
             in_redstone.shrink(1);
             in_redIngot.shrink(1);
             markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_HOE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.REDSTONE){
+        }else   if (in_tool.getItem() == Items.DIAMOND_HOE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
             items.set(3,new ItemStack(ItemsRegisters.red_hoe));
             in_tool.shrink(1);
             in_redstone.shrink(1);
             in_redIngot.shrink(1);
             markDirty();
         }
-
 
 
 

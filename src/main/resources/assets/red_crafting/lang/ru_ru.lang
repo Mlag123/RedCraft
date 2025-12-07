@@ -23,6 +23,8 @@ item.fire_pickaxe.name=Супер огненная кирка
 itemGroup.tool_tabs=Инструменты RedCraft
 itemGroup.red_tabs=Блоки RedCraft
 itemGroup.red_materials=Материалы RedCraft
+itemGroup.red_combat=Оружие и Доспехи RedCraft
+
 #blocks
 tile.red_ore.name=Огненная руда
 tile.natural_ore.name=Натуральная руда

@@ -6,7 +6,7 @@ import com.MLag.RedCraft.Main;
 import net.minecraft.item.ItemAxe;
 
 public class ItemAxeCreate extends ItemAxe  implements IHasModel {
-    protected ItemAxeCreate(String name, ToolMaterial material,float speed,float damage) {
+    public ItemAxeCreate(String name, ToolMaterial material,float speed,float damage) {
         super(material,damage,speed);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);

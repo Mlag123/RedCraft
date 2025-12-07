@@ -1,6 +1,8 @@
 package com.MLag.RedCraft.Items;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
+import com.MLag.RedCraft.Items.IceItems.*;
+import com.MLag.RedCraft.Items.NaturalItems.*;
 import com.MLag.RedCraft.Items.SpecificityItems.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.init.SoundEvents;
@@ -19,8 +21,10 @@ public class ItemsRegisters {
     public static final Item item = new CustomItem("тут тип аргументы"); С блоками так же.
          */
     //materials
-    public static final Item.ToolMaterial RED_MATERIAL = EnumHelper.addToolMaterial("red_crafting", 5, 2000, 15.0F, 4.0F, 12);
+    public static final Item.ToolMaterial RED_MATERIAL = EnumHelper.addToolMaterial("red_material", 5, 2000, 15.0F, 4.0F, 12);
     public static final Item.ToolMaterial FIRE_MATERIAL = EnumHelper.addToolMaterial("fire_material", 5, 25000, 15.0F, 4.0F, 12);
+    public static final Item.ToolMaterial ICE_MATERIAL = EnumHelper.addToolMaterial("ice_material",4,1000,8f,3f,12);
+    public static final Item.ToolMaterial NATURAL_MATERIAL = EnumHelper.addToolMaterial("natural_material",4,2000,10f,4f,12);
 
     public static final ItemArmor.ArmorMaterial RED_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("red_crafting:red_armor", "red_crafting:red_armor", 15, new int[]{2, 6, 5, 3}, 7, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
 
@@ -53,6 +57,19 @@ public class ItemsRegisters {
     public static Item semenInCapsule = new SemenInCapsuleItem("semen_in_capsule", CreativeTabsRegister.MATERIALS);
     public static Item cleaner_cat = new CleanerCatItem("cleaner_cat",RED_MATERIAL);
     public static Item fire_pickaxe = new FirePickaxeItem("fire_pickaxe",FIRE_MATERIAL);
+
+    public static Item ice_pickaxe = new IcePickaxe("ice_pickaxe", ICE_MATERIAL);
+    public static Item ice_axe = new IceAxe("ice_axe", ICE_MATERIAL,8f,5f);
+    public static Item ice_shovel = new IceShovel("ice_shovel", ICE_MATERIAL);
+    public static Item ice_sword = new IceSword("ice_sword", ICE_MATERIAL);
+    public static Item ice_hoe = new IceHoe("ice_hoe", ICE_MATERIAL);
+
+
+    public static Item natural_pickaxe = new NaturalPickaxe("natural_pickaxe", NATURAL_MATERIAL);
+    public static Item natural_axe = new NaturalAxe("natural_axe",NATURAL_MATERIAL,10f,10f);
+    public static Item natual_shovel = new NaturalShovel("natural_shovel", NATURAL_MATERIAL);
+    public static Item natural_sword = new NaturalSword("natural_sword", NATURAL_MATERIAL);
+    public static Item natural_hoe = new NaturalHoe("natural_hoe", NATURAL_MATERIAL);
 
 
 //fixme textures for armor
