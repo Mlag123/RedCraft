@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "iii",
-    " / ",
-    " / "
+    "ili",
+    "i/i"
   ],
   "key": {
     "i": {
@@ -11,7 +11,10 @@
     },
     "/": {
       "item": "red_crafting:stone_stick"
-    }
+    },
+	"l":{
+	"item":"minecraft:diamond_pickaxe"
+	}
   },
   "result": {
     "item": "red_crafting:red_pickaxe",

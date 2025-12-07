@@ -29,7 +29,7 @@ public class CreativeTabsRegister {
     public static final CreativeTabs COMBAT = new CreativeTabs("red_combat") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ItemsRegisters.Red_Sword);
+            return new ItemStack(ItemsRegisters.red_Sword);
         }
     };
 }

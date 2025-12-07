@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 public class BoykisserSmile extends CatBlockBase {
     public BoykisserSmile(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
         super(name, material, setHardness, creativeTabs, soundType);
+
     }
 
 

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " i ",
-    " i ",
-    " / "
+    "iii",
+    "ili",
+    "i/i"
   ],
   "key": {
     "i": {
@@ -11,6 +11,9 @@
     },
     "/": {
       "item": "red_crafting:stone_stick"
+    },
+    "l":{
+      "item":"minecraft:diamond_sword"
     }
   },
   "result": {

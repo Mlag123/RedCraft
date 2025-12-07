@@ -13,7 +13,6 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import static com.MLag.RedCraft.client.GUI.GUITest.initTexrute;
 
 public class BlockRegistationHandler {
     // public static Block BEST_STONE = new BlockBestStone("best_stone");

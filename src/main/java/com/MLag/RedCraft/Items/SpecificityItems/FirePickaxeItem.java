@@ -140,8 +140,35 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
     }
 
+
+    private void breakBlockWithFortune(World world, BlockPos pos, EntityPlayer player, ItemStack tool) {
+        IBlockState state = world.getBlockState(pos);
+        Block block = state.getBlock();
+
+        if (block == Blocks.BEDROCK) return;
+
+        int fortune = net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByID(35), tool);
+        // ID 35 — Fortune в 1.12.2
+
+        // Получаем дроп с учетом удачи
+        java.util.List<ItemStack> drops = block.getDrops(world, pos, state, fortune);
+
+        // Ломаем блок без дропа
+        world.setBlockToAir(pos);
+
+        // Выкидываем вручную
+        for (ItemStack drop : drops) {
+            Block.spawnAsEntity(world, pos, drop);
+        }
+
+        // Наносим урон инструменту
+        tool.damageItem(1, player);
+    }
+
+
     @Override
     public boolean onBlockDestroyed(ItemStack itemStack, World inWorld, IBlockState blockState, BlockPos blockpos, EntityLivingBase entityLivingBase) {
+
 
         if (!inWorld.isRemote && entityLivingBase instanceof EntityPlayer) {
 
@@ -152,6 +179,7 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
             Block block = blockState.getBlock();
 
             if (!player.isSneaking()) {
+
 
 
                 if (facing.equals(EnumFacing.SOUTH) || facing.equals(EnumFacing.NORTH)) {
@@ -168,7 +196,8 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
                                         if (targetState.getBlock() == Blocks.BEDROCK) {
                                             continue; // пропускаем бедрок
                                         }
-                                        inWorld.destroyBlock(newPos, true);
+                                        breakBlockWithFortune(inWorld,newPos,player,itemStack);
+                                    //    inWorld.destroyBlock(newPos, true);
                                     }
 
 
@@ -187,8 +216,9 @@ public class FirePickaxeItem extends ItemTool implements IHasModel {
                                             || targetState == Blocks.DIRT)
 
                                     {
+                                        breakBlockWithFortune(inWorld,newPos,player,itemStack);
 
-                                        inWorld.destroyBlock(newPos, true);
+                                     //   inWorld.destroyBlock(newPos, true);
                                     }
 
                                 }

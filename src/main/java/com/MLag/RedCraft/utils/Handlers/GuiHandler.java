@@ -1,8 +1,5 @@
 package com.MLag.RedCraft.utils.Handlers;
 
-import com.MLag.RedCraft.client.GUI.ChestContainer;
-import com.MLag.RedCraft.client.GUI.GUIMachineUpgrade;
-import com.MLag.RedCraft.client.GUI.TileEntityStorageMachine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;

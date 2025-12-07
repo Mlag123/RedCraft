@@ -1,26 +1,23 @@
 package com.MLag.RedCraft;
 
 
+import com.MLag.RedCraft.GUI.GUIProxy;
 import com.MLag.RedCraft.Proxy.CommonProxy;
-import com.MLag.RedCraft.client.GUI.GUITest;
+import com.MLag.RedCraft.Tiles.TestTileBlock;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
 import com.MLag.RedCraft.utils.Handlers.TextureLoader;
-import com.MLag.RedCraft.utils.Sound;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.MLag.RedCraft.Constants.MODIDS;
-import static com.MLag.RedCraft.client.GUI.GUITest.initTexrute;
 
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main {
@@ -53,18 +50,18 @@ public class Main {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
+        NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance,new GUIProxy());
+
+        GameRegistry.registerTileEntity(TestTileBlock.class,"red_crafting_testtileblock");
         proxy.preInit(event);
 
         TextureLoader textureLoader = new TextureLoader();
-        // FIXME: 21.01.2024    InitEntity i = new InitEntity();
         BlockReg.register();
-        
-
         BlockReg.registerRender();
         FurnanceRegistrarion.FurnanceRegistarion();
         regCraft.register();
         GameRegistry.registerWorldGenerator(new GeneratorOre(), 0);
-        initTexrute(); // FIXME: 22.10.2023
+      ///  initTexrute(); // FIXME: 22.10.2023
 
     }
 
