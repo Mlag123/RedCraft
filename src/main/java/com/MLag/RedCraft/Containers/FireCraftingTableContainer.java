@@ -18,6 +18,8 @@ public class FireCraftingTableContainer extends Container {
 
     private int cook,totalTime;
 
+
+    //создаем контейнер для gui
     public FireCraftingTableContainer(InventoryPlayer playerInv, FiteTileCraftingTableBlock te) {
         // Слоты 3×3
         this.te = te;
@@ -37,10 +39,14 @@ public class FireCraftingTableContainer extends Container {
     }
 
 
+    //получение флага, bool, для изменение интерфейса
+
     public boolean isIdle (){
         return te.getIdle();
     }
 
+
+    //обновляет крафт для клиента
     @Override
     public void onCraftMatrixChanged(IInventory inventoryIn) {
         super.onCraftMatrixChanged(inventoryIn);
@@ -52,6 +58,8 @@ public class FireCraftingTableContainer extends Container {
         return true;
     }
 
+
+    //выбрасывает предметы, когда выходишь из GUI
     @Override
     public void onContainerClosed(EntityPlayer playerIn) {
         super.onContainerClosed(playerIn);
@@ -68,6 +76,12 @@ public class FireCraftingTableContainer extends Container {
         }
     }
 
+
+
+    /*
+
+    отвечает за быстрей перенос. Надо фиксить.
+     */
     @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
      /*   ItemStack itemstack = ItemStack.EMPTY;
