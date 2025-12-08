@@ -31,6 +31,9 @@ public class BlocksRegisters {
     public static final Block boykisser_smile = new BoykisserSmile("boykisser_smile",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
     public static final Block boykisser_sad = new BoykisserSad("boykisser_sad",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
     public static final Block test_custom_craftable_block = new FireCraftingTableBlock("fire_craftingtable",Material.IRON,3f,CreativeTabsRegister.BLOCKS,SoundType.METAL);
+
+    public static final Block gars_block = new GarsBlock("gars_block",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
+
     public BlocksRegisters() {
 
     }

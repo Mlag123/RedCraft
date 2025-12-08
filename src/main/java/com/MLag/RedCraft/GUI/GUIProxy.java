@@ -24,7 +24,7 @@ public class GUIProxy implements IGuiHandler {
         if(ID == 0){
             FireCraftingTableContainer container = new FireCraftingTableContainer(player.inventory,
                     (FiteTileCraftingTableBlock) world.getTileEntity(new BlockPos(x,y,z)));
-            return new TestCustomGUI(container); // Только один аргумент
+            return new MachineCraftTableGUI(container); // Только один аргумент
         }
         return null;
     }

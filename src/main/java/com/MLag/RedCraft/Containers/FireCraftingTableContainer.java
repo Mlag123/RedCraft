@@ -20,10 +20,10 @@ public class FireCraftingTableContainer extends Container {
     public FireCraftingTableContainer(InventoryPlayer playerInv, FiteTileCraftingTableBlock te) {
         // Слоты 3×3
         this.te = te;
-       this.addSlotToContainer(new RedMachineSlotIn(te,0,47,9));
-       this.addSlotToContainer(new RedIngotInSlot(te,1,47,47));
+       this.addSlotToContainer(new RedMachineSlotIn(te,0,33,10));
+       this.addSlotToContainer(new RedIngotInSlot(te,1,33,47));
        this.addSlotToContainer(new LeftInSlot(te,2,8,28));
-       this.addSlotToContainer(new OutputRedMachineSlot(te,3,92,28));
+       this.addSlotToContainer(new OutputRedMachineSlot(te,3,78,28));
 
         // Слоты игрока
         int leftCol = 8;
