@@ -8,6 +8,7 @@ import com.MLag.RedCraft.client.GUI.Slots.LeftInSlot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
@@ -36,6 +37,16 @@ public class FireCraftingTableContainer extends Container {
     }
 
 
+    public boolean isIdle (){
+        return te.getIdle();
+    }
+
+    @Override
+    public void onCraftMatrixChanged(IInventory inventoryIn) {
+        super.onCraftMatrixChanged(inventoryIn);
+        te.updateCraftPreview();
+    }
+
     @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
         return true;
@@ -59,7 +70,7 @@ public class FireCraftingTableContainer extends Container {
 
     @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
-        ItemStack itemstack = ItemStack.EMPTY;
+     /*   ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.inventorySlots.get(index);
 
         if (slot != null && slot.getHasStack()) {
@@ -70,6 +81,7 @@ public class FireCraftingTableContainer extends Container {
             if (index < te.getSizeInventory()) {
                 if (!this.mergeItemStack(stack, te.getSizeInventory(),
                         this.inventorySlots.size(), true)) {
+                    te.doCraft();
                     return ItemStack.EMPTY;
                 }
             } else {
@@ -83,7 +95,12 @@ public class FireCraftingTableContainer extends Container {
             } else {
                 slot.onSlotChanged();
             }
+
         }
 
-        return itemstack;    }
+        return itemstack;   */
+
+        return ItemStack.EMPTY;
+
+    }
 }

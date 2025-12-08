@@ -17,49 +17,84 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
     // ----- BASIC INVENTORY -----
 
 
-    private void doCraft() {
+    private boolean idle_gui = true;
+
+
+    public boolean getIdle() {
+        return idle_gui;
+    }
+
+
+    public void updateCraftPreview() {
         ItemStack in_tool = items.get(0);
         ItemStack in_redIngot = items.get(1);
         ItemStack in_redstone = items.get(2);
         ItemStack out = items.get(3);
 
-        if (!out.isEmpty()) return;
+        idle_gui = true;
+        // Если выходной слот уже занят — не трогаем
 
-        if (in_tool.isEmpty() || in_redstone.isEmpty()||in_redIngot.isEmpty()) return;
-
-
-        if (in_tool.getItem() == Items.DIAMOND_PICKAXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
-            items.set(3,new ItemStack(ItemsRegisters.Red_Pickaxe));
-            in_tool.shrink(1);
-            in_redstone.shrink(1);
-            in_redIngot.shrink(1);
-            markDirty();
-        } else   if (in_tool.getItem() == Items.DIAMOND_SHOVEL  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
-            items.set(3,new ItemStack(ItemsRegisters.red_spade));
-            in_tool.shrink(1);
-            in_redstone.shrink(1);
-            in_redIngot.shrink(1);
-            markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_SWORD  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
-            items.set(3,new ItemStack(ItemsRegisters.red_Sword));
-            in_tool.shrink(1);
-            in_redstone.shrink(1);
-            in_redIngot.shrink(1);
-            markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_AXE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
-            items.set(3,new ItemStack(ItemsRegisters.Red_Axe));
-            in_tool.shrink(1);
-            in_redstone.shrink(1);
-            in_redIngot.shrink(1);
-            markDirty();
-        }else   if (in_tool.getItem() == Items.DIAMOND_HOE  && in_redIngot.getItem() == ItemsRegisters.red_ingot&& in_redstone.getItem() == Items.BLAZE_POWDER){
-            items.set(3,new ItemStack(ItemsRegisters.red_hoe));
-            in_tool.shrink(1);
-            in_redstone.shrink(1);
-            in_redIngot.shrink(1);
-            markDirty();
+        // Проверяем вход
+        if (in_tool.isEmpty() || in_redstone.isEmpty() || in_redIngot.isEmpty()) {
+            items.set(3, ItemStack.EMPTY);
+            return;
         }
 
+        // Проверка рецептов
+        if (in_tool.getItem() == Items.DIAMOND_PICKAXE
+                && in_redIngot.getItem() == ItemsRegisters.red_ingot
+                && in_redstone.getItem() == Items.BLAZE_POWDER) {
+            idle_gui = false;
+            items.set(3, new ItemStack(ItemsRegisters.Red_Pickaxe));
+
+        } else if (in_tool.getItem() == Items.DIAMOND_SHOVEL
+                && in_redIngot.getItem() == ItemsRegisters.red_ingot
+                && in_redstone.getItem() == Items.BLAZE_POWDER) {
+            idle_gui = false;
+
+            items.set(3, new ItemStack(ItemsRegisters.red_spade));
+
+        } else if (in_tool.getItem() == Items.DIAMOND_SWORD
+                && in_redIngot.getItem() == ItemsRegisters.red_ingot
+                && in_redstone.getItem() == Items.BLAZE_POWDER) {
+            idle_gui = false;
+
+            items.set(3, new ItemStack(ItemsRegisters.red_Sword));
+        } else if (in_tool.getItem() == Items.DIAMOND_AXE
+                && in_redIngot.getItem() == ItemsRegisters.red_ingot
+                && in_redstone.getItem() == Items.BLAZE_POWDER) {
+            idle_gui = false;
+
+            items.set(3, new ItemStack(ItemsRegisters.Red_Axe));
+        } else if (in_tool.getItem() == Items.DIAMOND_HOE
+                && in_redIngot.getItem() == ItemsRegisters.red_ingot
+                && in_redstone.getItem() == Items.BLAZE_POWDER) {
+            idle_gui = false;
+
+            items.set(3, new ItemStack(ItemsRegisters.red_hoe));
+        }
+
+
+        // и т.д.
+        markDirty();
+
+      //  idle_gui = true;
+    }
+
+    public void doCraft() {
+        ItemStack in_tool = items.get(0);
+        ItemStack in_redIngot = items.get(1);
+        ItemStack in_redstone = items.get(2);
+        ItemStack out = items.get(3);
+
+        //   if (out.isEmpty()) return;
+
+        //      if (in_tool.isEmpty() || in_redstone.isEmpty() || in_redIngot.isEmpty()) return;
+
+        in_tool.shrink(1);
+        in_redstone.shrink(1);
+        in_redIngot.shrink(1);
+        markDirty();
 
 
     }
@@ -97,9 +132,22 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
     @Override
     public void setInventorySlotContents(int index, ItemStack stack) {
         items.set(index, stack);
+
+        if (stack.getCount() > getInventoryStackLimit()) {
+            stack.setCount(getInventoryStackLimit());
+        }
+
+        if (index != 3) {
+            updateCraftPreview();
+        }
+
+        markDirty();
+
+
+ /*       items.set(index, stack);
         if (stack.getCount() > getInventoryStackLimit())
             stack.setCount(getInventoryStackLimit());
-        markDirty();
+        markDirty();*/
     }
 
     @Override
@@ -118,7 +166,6 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
     }
 
 
-
     @Override
     public void closeInventory(EntityPlayer player) {
         if (!world.isRemote) {
@@ -130,7 +177,7 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
                     player.dropItem(stack, false);
 
                     // очищаем слот
-                    items.set(i,ItemStack.EMPTY);
+                    items.set(i, ItemStack.EMPTY);
                 }
             }
 
@@ -196,7 +243,7 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
     @Override
     public void update() {
         if (!world.isRemote) {
-            doCraft();
+            // doCraft();
 
         }
     }
