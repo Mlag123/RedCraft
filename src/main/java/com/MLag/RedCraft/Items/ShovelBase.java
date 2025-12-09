@@ -5,8 +5,8 @@ import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
 import net.minecraft.item.ItemSpade;
 
-public class ItemCreateSpade extends ItemSpade implements IHasModel {
-    public ItemCreateSpade(String name, ToolMaterial material) {
+public class ShovelBase extends ItemSpade implements IHasModel {
+    public ShovelBase(String name, ToolMaterial material) {
         super(material);
         this.setUnlocalizedName(name);
         this.setRegistryName(name);

@@ -5,8 +5,8 @@ import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
 import net.minecraft.item.ItemPickaxe;
 
-public class ItemsPickCreate extends ItemPickaxe implements IHasModel {
-    public ItemsPickCreate(String name, ToolMaterial material) {
+public class PickaxeBase extends ItemPickaxe implements IHasModel {
+    public PickaxeBase(String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);

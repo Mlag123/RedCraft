@@ -17,7 +17,7 @@ public class CreativeTabsRegister {
     public static final CreativeTabs TOOL = new CreativeTabs("tool_tabs") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ItemsRegisters.Red_Pickaxe);
+            return new ItemStack(ItemsRegisters.fire_pickaxe);
         }
     };
     public static final CreativeTabs MATERIALS = new CreativeTabs("red_materials") {
@@ -29,7 +29,7 @@ public class CreativeTabsRegister {
     public static final CreativeTabs COMBAT = new CreativeTabs("red_combat") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ItemsRegisters.red_Sword);
+            return new ItemStack(ItemsRegisters.fire_sword);
         }
     };
 }

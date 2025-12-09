@@ -5,7 +5,6 @@ import com.MLag.RedCraft.GUI.GUIProxy;
 import com.MLag.RedCraft.Proxy.CommonProxy;
 import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
-import com.MLag.RedCraft.utils.Handlers.TextureLoader;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -55,7 +54,6 @@ public class Main {
         GameRegistry.registerTileEntity(FiteTileCraftingTableBlock.class,"red_craftig_firecraftingtable_tile");
         proxy.preInit(event);
 
-        TextureLoader textureLoader = new TextureLoader();
         BlockReg.register();
         BlockReg.registerRender();
         FurnanceRegistrarion.FurnanceRegistarion();

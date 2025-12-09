@@ -5,8 +5,8 @@ import com.MLag.RedCraft.Main;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.item.ItemHoe;
 
-public class ItemCreateHoe extends ItemHoe implements IHasModel {
-    public ItemCreateHoe(String name, ToolMaterial redMaterial) {
+public class HoeBase extends ItemHoe implements IHasModel {
+    public HoeBase(String name, ToolMaterial redMaterial) {
         super(redMaterial);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);

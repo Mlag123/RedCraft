@@ -1,10 +1,6 @@
 package com.MLag.RedCraft.Items.SpecificityItems;
 
-import com.MLag.RedCraft.Blocks.BlockCreate;
-import com.MLag.RedCraft.Items.ItemCreate;
 import com.MLag.RedCraft.Items.ItemsRegisters;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;

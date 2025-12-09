@@ -1,6 +1,6 @@
 package com.MLag.RedCraft.Items.SpecificityItems;
 
-import com.MLag.RedCraft.Items.ItemCreate;
+import com.MLag.RedCraft.Items.ItemBase;
 import com.MLag.RedCraft.Items.ItemsRegisters;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.logging.Logger;
 
-public class CapsuleItem extends ItemCreate {
+public class CapsuleItem extends ItemBase {
     public CapsuleItem(String name, CreativeTabs creativeTabs) {
 
         super(name, creativeTabs);

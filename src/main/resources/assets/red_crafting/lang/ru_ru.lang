@@ -1,23 +1,32 @@
 #items
 item.red_nugget.name=Огненная Самородок
 item.red_ingot.name=Огненный Слиток
-item.red_pickaxe.name=Огненная Кирка
 item.red_coin.name=Огненная Монета
-item.red_axe.name=Огненный Топор
-item.red_sword.name=Огненный меч
-item.red_spade.name=Огненная Лопата
 item.stone_stick.name=Окаменелая палка
 item.pressed_wooden_stick.name=Спрессованная деревянная палка
 item.natural_ingot.name = Натуральный слиток
 item.wrench.name=Ключ
-item.red_hoe.name=Огненная мотыга
 item.semen_in_capsule.name=Капсула с семенем
 item.capsule_item.name=Пустая капсула
 item.natural_amuelt.name=Природный амулет (не используется)
 item.semen_item.name=Семя
 item.cleaner_cat.name=Щётка для кота
-item.fire_pickaxe.name=Супер огненная кирка
 
+#fire items
+
+
+item.fire_pickaxe.name=Огненная кирка
+item.fire_axe.name=Огненный топор
+item.fire_sword.name=Огненный меч
+item.fire_shovel.name=Огненная лопата
+item.fire_multitool.name=Огненный мультиинструмент
+item.fire_hoe.name=Огненная мотыга
+
+#fire armor
+item.fire_helmet.name=Огненный шлем
+item.fire_chestplate.name= Огненный нагрудник
+item.fire_leggs.name=Огненные поножи
+item.fire_boots.name=Огненные ботинки
 
 #tooltabs
 itemGroup.tool_tabs=Инструменты RedCraft

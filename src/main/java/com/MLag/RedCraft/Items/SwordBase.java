@@ -1,23 +1,21 @@
 package com.MLag.RedCraft.Items;
 
+import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemSword;
 
-public class ItemCreate extends Item implements IHasModel {
-    public ItemCreate(String name, CreativeTabs creativeTabs) {
+public class SwordBase extends ItemSword implements IHasModel {
+    public SwordBase(String name, ToolMaterial material) {
+        super(material);
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
-        this.setCreativeTab(creativeTabs);
+        this.setCreativeTab(CreativeTabsRegister.COMBAT);
         ItemsRegisters.Items_Arrays.add(this);
 
     }
-
-
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
     }
-
 }

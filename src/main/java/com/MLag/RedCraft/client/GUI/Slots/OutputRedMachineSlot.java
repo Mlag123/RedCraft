@@ -1,13 +1,8 @@
 package com.MLag.RedCraft.client.GUI.Slots;
 
-import com.MLag.RedCraft.Items.ItemsRegisters;
-import com.MLag.RedCraft.Items.SpecificityItems.FirePickaxeItem;
-import com.MLag.RedCraft.Main;
 import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class OutputRedMachineSlot extends Slot {

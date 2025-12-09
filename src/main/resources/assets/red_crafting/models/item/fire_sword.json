@@ -1,6 +1,6 @@
 {
 	"parent":"item/handheld",
 	"textures":{
-		"layer0":"red_crafting:items/red_sword"
+		"layer0":"red_crafting:items/fire_sword"
 	}
 }

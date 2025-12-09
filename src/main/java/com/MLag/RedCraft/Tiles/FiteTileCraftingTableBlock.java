@@ -45,33 +45,33 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
                 && in_redIngot.getItem() == ItemsRegisters.red_ingot
                 && in_redstone.getItem() == Items.BLAZE_POWDER) {
             idle_gui = false;
-            items.set(3, new ItemStack(ItemsRegisters.Red_Pickaxe));
+            items.set(3, new ItemStack(ItemsRegisters.fire_pickaxe));
 
         } else if (in_tool.getItem() == Items.DIAMOND_SHOVEL
                 && in_redIngot.getItem() == ItemsRegisters.red_ingot
                 && in_redstone.getItem() == Items.BLAZE_POWDER) {
             idle_gui = false;
 
-            items.set(3, new ItemStack(ItemsRegisters.red_spade));
+            items.set(3, new ItemStack(ItemsRegisters.fire_shovel));
 
         } else if (in_tool.getItem() == Items.DIAMOND_SWORD
                 && in_redIngot.getItem() == ItemsRegisters.red_ingot
                 && in_redstone.getItem() == Items.BLAZE_POWDER) {
             idle_gui = false;
 
-            items.set(3, new ItemStack(ItemsRegisters.red_Sword));
+            items.set(3, new ItemStack(ItemsRegisters.fire_shovel));
         } else if (in_tool.getItem() == Items.DIAMOND_AXE
                 && in_redIngot.getItem() == ItemsRegisters.red_ingot
                 && in_redstone.getItem() == Items.BLAZE_POWDER) {
             idle_gui = false;
 
-            items.set(3, new ItemStack(ItemsRegisters.Red_Axe));
+            items.set(3, new ItemStack(ItemsRegisters.fire_axe));
         } else if (in_tool.getItem() == Items.DIAMOND_HOE
                 && in_redIngot.getItem() == ItemsRegisters.red_ingot
                 && in_redstone.getItem() == Items.BLAZE_POWDER) {
             idle_gui = false;
 
-            items.set(3, new ItemStack(ItemsRegisters.red_hoe));
+            items.set(3, new ItemStack(ItemsRegisters.fire_hoe));
         }
 
 

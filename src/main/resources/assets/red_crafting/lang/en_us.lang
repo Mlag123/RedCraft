@@ -1,21 +1,36 @@
 item.red_nugget.name=Fire Nugget
 item.red_ingot.name=Fire Ingot
-item.red_pickaxe.name=Fire Pickaxe
 item.red_coin.name=Fire Coin
-item.red_axe.name=Fire Axe
-item.red_sword.name=Fire Sword
-item.red_spade.name=Fire Spade
+
+
+#fire tools
+item.fire_pickaxe.name=Fire Pickaxe
+item.fire_axe.name=Fire Axe
+item.fire_sword.name=Fire Sword
+item.fire_shovel.name=Fire Spade
+item.fire_multitool.name=Fire Multitool
+item.fire_hoe.name=Fire Hoe
+
+#fire armor
+
+
+#fire armor
+item.fire_helmet.name=Fire Helmet
+item.fire_chestplate.name= Fire Chestplate
+item.fire_leggs.name=Fire Leggings
+item.fire_boots.name=Fire Boots
+
+
 item.stone_stick.name=Stone Stick
 item.pressed_wooden_stick.name=Pressed Wooden Stick
 item.natural_ingot.name=Natural Ingot
-item.red_hoe.name=Fire Hoe
+
 item.wrench.name=Wrench
 item.semen_in_capsule.name=Capsule with semen
 item.capsule_item.name=Empty Capsule
 item.natural_amuelt.name=Natural Amulet (not used)
 item.semen_item.name=Semen
 item.cleaner_cat.name=Cat Brush
-item.fire_pickaxe.name=Super Fire Pickaxe
 
 
 ##blocks

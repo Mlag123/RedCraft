@@ -3,17 +3,18 @@ package com.MLag.RedCraft.Items;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import com.MLag.RedCraft.IHasModel;
 import com.MLag.RedCraft.Main;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemAxe;
 
-public class ItemCreateSword extends ItemSword implements IHasModel {
-    public ItemCreateSword(String name, ToolMaterial material) {
-        super(material);
-        this.setUnlocalizedName(name);
+public class AxeBase extends ItemAxe  implements IHasModel {
+    public AxeBase(String name, ToolMaterial material, float speed, float damage) {
+        super(material,damage,speed);
         this.setRegistryName(name);
-        this.setCreativeTab(CreativeTabsRegister.COMBAT);
+        this.setUnlocalizedName(name);
+        this.setCreativeTab(CreativeTabsRegister.TOOL);
         ItemsRegisters.Items_Arrays.add(this);
 
     }
+
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
