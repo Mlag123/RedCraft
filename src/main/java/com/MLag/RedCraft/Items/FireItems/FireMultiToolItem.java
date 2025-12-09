@@ -173,7 +173,7 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
 
             EnumFacing facing = player.getHorizontalFacing();
 
-            Block block = blockState.getBlock();
+         //   Block block = blockState.getBlock();
 
             if (!player.isSneaking()) {
 
