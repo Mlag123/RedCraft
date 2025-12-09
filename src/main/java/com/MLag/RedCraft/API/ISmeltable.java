@@ -1,4 +1,4 @@
-package com.MLag.RedCraft.Interfaces;
+package com.MLag.RedCraft.API;
 
 import net.minecraft.item.ItemStack;
 
