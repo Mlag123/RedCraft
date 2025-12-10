@@ -39,6 +39,6 @@ public class MachineCraftTableGUI extends GuiContainer {
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         boolean idle = container.isIdle();
         drawIdle(idle);
-        Main.log.info(idle);
+       // Main.log.info(idle);
     }
 }

@@ -3,9 +3,11 @@ package com.MLag.RedCraft;
 
 import com.MLag.RedCraft.GUI.GUIProxy;
 import com.MLag.RedCraft.Proxy.CommonProxy;
+import com.MLag.RedCraft.Tiles.EnergyConverterTile;
 import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -49,9 +51,12 @@ public class Main {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
+        Loader.isModLoaded("redstoneflux");
+
         NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance,new GUIProxy());
 
         GameRegistry.registerTileEntity(FiteTileCraftingTableBlock.class,"red_craftig_firecraftingtable_tile");
+        GameRegistry.registerTileEntity(EnergyConverterTile.class,"energy_converter_tile");
         proxy.preInit(event);
 
         BlockReg.register();

@@ -1,16 +1,24 @@
 package com.MLag.RedCraft.Tiles;
 
 import com.MLag.RedCraft.Items.ItemsRegisters;
+import com.MLag.RedCraft.Main;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.energy.IEnergyStorage;
 
 public class FiteTileCraftingTableBlock extends TileEntity implements IInventory, ITickable {
+
+    private CustomEnergyStorage storage = new CustomEnergyStorage(10000,200,200);
 
     private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
 
@@ -97,6 +105,25 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
         markDirty();
 
 
+    }
+
+
+
+
+
+    @Override
+    public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
+        return capability == CapabilityEnergy.ENERGY || super.hasCapability(capability, facing);
+    }
+
+
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
+        if (capability == CapabilityEnergy.ENERGY)
+            return (T) storage;
+        return super.getCapability(capability, facing);
     }
 
     @Override
@@ -220,6 +247,21 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
         return false;
     }
 
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        super.writeToNBT(compound);
+
+        compound.setInteger("Energy",storage.getEnergyStored());
+        return compound;
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound compound) {
+        super.readFromNBT(compound);
+        if (compound.hasKey("Energy")){
+            storage.setEnergy(compound.getInteger("Energy"));
+        }
+    }
 
     // ----- NBT SAVE / LOAD -----
 
@@ -242,6 +284,38 @@ public class FiteTileCraftingTableBlock extends TileEntity implements IInventory
 
     @Override
     public void update() {
+
+        if (world.isRemote) return;
+
+        EnumFacing out = EnumFacing.EAST;
+
+        TileEntity te = world.getTileEntity(pos.offset(out));
+
+        if (te !=null && te.hasCapability(CapabilityEnergy.ENERGY,out.getOpposite())){
+
+            IEnergyStorage other = te.getCapability(CapabilityEnergy.ENERGY,out.getOpposite());
+
+            if (other!=null && storage.getEnergyStored()>0){
+       /*         int extract = storage.extractEnergy(200,true);
+                int received = other.receiveEnergy(extract,false);
+                storage.extractEnergy(received,false);
+                markDirty();*/
+
+
+                //prinimaem
+
+                int canRecieve = storage.receiveEnergy(200,true);
+                int extracted = other.extractEnergy(canRecieve,false);
+                storage.receiveEnergy(extracted,false);
+
+                markDirty();
+
+
+                Main.log.info(" Получил: " + extracted
+                        + " Моя энергия: " + storage.getEnergyStored());
+            }
+        }
+
         if (!world.isRemote) {
             // doCraft();
 

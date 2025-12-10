@@ -1,5 +1,6 @@
 package com.MLag.RedCraft.Blocks;
 
+import com.MLag.RedCraft.Blocks.EnergyBlocks.EnergyConverter;
 import com.MLag.RedCraft.Blocks.Machines.FireCraftingTableBlock;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
@@ -33,6 +34,8 @@ public class BlocksRegisters {
     public static final Block test_custom_craftable_block = new FireCraftingTableBlock("fire_craftingtable",Material.IRON,3f,CreativeTabsRegister.BLOCKS,SoundType.METAL);
 
     public static final Block gars_block = new GarsBlock("gars_block",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
+
+    public static final Block energy_converter = new EnergyConverter("energy_converter",Material.ROCK,3f,CreativeTabsRegister.BLOCKS,SoundType.STONE);
 
     public BlocksRegisters() {
 
