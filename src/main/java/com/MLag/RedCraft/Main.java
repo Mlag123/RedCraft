@@ -6,6 +6,7 @@ import com.MLag.RedCraft.Proxy.CommonProxy;
 import com.MLag.RedCraft.Tiles.EnergyConverterTile;
 import com.MLag.RedCraft.Tiles.FiteTileCraftingTableBlock;
 import com.MLag.RedCraft.utils.FurnanceRegistrarion;
+import net.minecraft.client.shader.ShaderManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
@@ -50,6 +51,7 @@ public class Main {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        
 
         Loader.isModLoaded("redstoneflux");
 

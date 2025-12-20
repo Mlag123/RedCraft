@@ -30,7 +30,7 @@ item.fire_boots.name=Огненные ботинки
 
 #tooltabs
 itemGroup.tool_tabs=Инструменты RedCraft
-itemGroup.red_tabs=Блоки RedCraft
+itemGroup.block_tabs=Блоки RedCraft
 itemGroup.red_materials=Материалы RedCraft
 itemGroup.red_combat=Оружие и Доспехи RedCraft
 

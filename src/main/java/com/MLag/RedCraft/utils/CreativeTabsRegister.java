@@ -7,10 +7,10 @@ import net.minecraft.item.ItemStack;
 
 public class CreativeTabsRegister {
     //создание вкладок в креативе
-    public static final CreativeTabs BLOCKS = new CreativeTabs("red_tabs") {
+    public static final CreativeTabs BLOCKS = new CreativeTabs("block_tabs") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(BlocksRegisters.Red_ore);
+            return new ItemStack(BlocksRegisters.maxwell_block);
         }
     };
 
