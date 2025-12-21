@@ -4,7 +4,7 @@ item.red_ingot.name=Огненный Слиток
 item.red_coin.name=Огненная Монета
 item.stone_stick.name=Окаменелая палка
 item.pressed_wooden_stick.name=Спрессованная деревянная палка
-item.natural_ingot.name = Натуральный слиток
+item.natural_ingot.name=Натуральный слиток
 item.wrench.name=Ключ
 item.semen_in_capsule.name=Капсула с семенем
 item.capsule_item.name=Пустая капсула
@@ -45,5 +45,13 @@ tile.maxwell_block.name=Максвелл
 tile.boykisser_happy.name=Весёлый глупый кот
 tile.boykisser_smile.name=Улыбающийся глупый кот
 tile.boykisser_sad.name=Грустный глупый кот
+
+
+#natural tools
+item.natural_sword.name=Природный меч
+item.natural_pickaxe.name=Природная кирка
+item.natural_axe.name=Природный топор
+item.natural_shovel.name=Природная лопата
+item.natural_hoe.name=Природная мотыга
 
 

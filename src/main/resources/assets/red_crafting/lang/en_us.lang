@@ -53,3 +53,9 @@ itemGroup.block_tabs=Blocks RedCraft
 itemGroup.red_materials=Materials RedCraft
 itemGroup.red_combat=Combat RedCraft
 
+#natural tools
+item.natural_sword.name=Natural Sword
+item.natural_pickaxe.name=Natural Pickaxe
+item.natural_axe.name=Natural Axe
+item.natural_shovel.name=Natural Shovel
+item.natural_hoe.name=Natural Hoe

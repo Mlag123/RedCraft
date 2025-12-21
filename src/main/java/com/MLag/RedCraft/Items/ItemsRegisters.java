@@ -22,9 +22,9 @@ public class ItemsRegisters {
          */
     //materials
     public static final Item.ToolMaterial RED_MATERIAL = EnumHelper.addToolMaterial("red_material", 5, 2000, 15.0F, 4.0F, 12);
-    public static final Item.ToolMaterial FIRE_MATERIAL = EnumHelper.addToolMaterial("fire_material", 5, 25000, 15.0F, 4.0F, 12);
-    public static final Item.ToolMaterial ICE_MATERIAL = EnumHelper.addToolMaterial("ice_material", 4, 1000, 8f, 3f, 12);
-    public static final Item.ToolMaterial NATURAL_MATERIAL = EnumHelper.addToolMaterial("natural_material", 4, 2000, 10f, 4f, 12);
+    public static final Item.ToolMaterial FIRE_MATERIAL = EnumHelper.addToolMaterial("fire_material", 5, 25000, 15.0F, 4.0F, 12); //maybe fix
+    public static final Item.ToolMaterial ICE_MATERIAL = EnumHelper.addToolMaterial("ice_material", 4, 4500, 12f, 3f, 12);
+    public static final Item.ToolMaterial NATURAL_MATERIAL = EnumHelper.addToolMaterial("natural_material", 4, 1600, 10f, 4f, 12);
 
     public static final ItemArmor.ArmorMaterial RED_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("red_crafting:red_armor", "red_crafting:red_armor", 15, new int[]{2, 6, 5, 3}, 7, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
 

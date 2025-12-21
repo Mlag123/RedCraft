@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ii",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "i": {
+      "item": "red_crafting:natural_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "red_crafting:natural_hoe",
+    "count": 1
+  }
+}
