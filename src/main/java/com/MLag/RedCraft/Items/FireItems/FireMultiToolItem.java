@@ -12,6 +12,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeHooks;
 
 import java.util.Set;
 
@@ -138,29 +140,46 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
     }
 
 
-    private void breakBlockWithFortune(World world, BlockPos pos, EntityPlayer player, ItemStack tool) {
+
+
+    public static void breakBlockLikePlayer(
+            World world,
+            BlockPos pos,
+            EntityPlayer player,
+            ItemStack tool
+    ) {
+        if (world.isRemote) return;
+        if (!(player instanceof EntityPlayerMP)) return;
+
+        EntityPlayerMP playerMP = (EntityPlayerMP) player;
+
         IBlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
 
+        if (block.isAir(state, world, pos)) return;
         if (block == Blocks.BEDROCK) return;
 
-        int fortune = net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByID(35), tool);
-        // ID 35 — Fortune в 1.12.2
+        int exp = ForgeHooks.onBlockBreakEvent(
+                world,
+                playerMP.interactionManager.getGameType(),
+                playerMP,
+                pos
+        );
 
-        // Получаем дроп с учетом удачи
-        java.util.List<ItemStack> drops = block.getDrops(world, pos, state, fortune);
+        if (exp == -1) return;
 
-        // Ломаем блок без дропа
+        block.onBlockHarvested(world, pos, state, player);
+        block.harvestBlock(world, player, pos, state, null, tool);
         world.setBlockToAir(pos);
 
-        // Выкидываем вручную
-        for (ItemStack drop : drops) {
-            Block.spawnAsEntity(world, pos, drop);
+        if (exp > 0) {
+            block.dropXpOnBlockBreak(world, pos, exp);
         }
 
-        // Наносим урон инструменту
         tool.damageItem(1, player);
     }
+
+
 
 
     @Override
@@ -193,7 +212,7 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
                                         if (targetState.getBlock() == Blocks.BEDROCK) {
                                             continue; // пропускаем бедрок
                                         }
-                                        breakBlockWithFortune(inWorld,newPos,player,itemStack);
+                                        //     breakBlockWithFortune(inWorld,newPos,player,itemStack);
                                     //    inWorld.destroyBlock(newPos, true);
                                     }
 
@@ -213,7 +232,9 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
                                             || targetState == Blocks.DIRT)
 
                                     {
-                                        breakBlockWithFortune(inWorld,newPos,player,itemStack);
+
+                                        breakBlockLikePlayer(inWorld,newPos,player,itemStack);
+                                    //    breakBlockWithFortune(inWorld,newPos,player,itemStack);
 
                                      //   inWorld.destroyBlock(newPos, true);
                                     }
@@ -234,7 +255,7 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
                                         if (targetState.getBlock() == Blocks.BEDROCK) {
                                             continue; // пропускаем бедрок
                                         }
-                                        inWorld.destroyBlock(newPos, true);
+                                       // inWorld.destroyBlock(newPos, true);
                                     }
 
 
@@ -251,7 +272,8 @@ public class FireMultiToolItem extends ItemTool implements IHasModel {
                                             || targetState.getMaterial() == Material.GROUND
                                             || targetState == Blocks.GRAVEL
                                             || targetState == Blocks.DIRT) {
-                                        inWorld.destroyBlock(newPos, true);
+                                        breakBlockLikePlayer(inWorld,newPos,player,itemStack);
+
                                     }
                                 }
                             }

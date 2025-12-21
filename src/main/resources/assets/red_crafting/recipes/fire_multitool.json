@@ -6,20 +6,20 @@
     ],
     "key": {
         "#": {
-            "item": "red_crafting:red_pickaxe"
+            "item": "red_crafting:fire_pickaxe"
         },
         "E": {
-            "item": "red_crafting:red_axe"
+            "item": "red_crafting:fire_axe"
         },
         "B": {
-            "item": "red_crafting:red_spade"
+            "item": "red_crafting:fire_shovel"
         },
         "S": {
-            "item": "red_crafting:red_hoe"
+            "item": "red_crafting:fire_hoe"
         }
     },
     "result": {
-        "item": "red_crafting:fire_pickaxe",
+        "item": "red_crafting:fire_multitool",
         "count": 1
     }
 }
