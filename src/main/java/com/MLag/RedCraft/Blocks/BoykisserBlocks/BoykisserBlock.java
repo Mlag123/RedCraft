@@ -1,4 +1,4 @@
-package com.MLag.RedCraft.Blocks.SpecifityBlocks;
+package com.MLag.RedCraft.Blocks.BoykisserBlocks;
 
 
 import com.MLag.RedCraft.Blocks.CatBlockBase;

@@ -2,6 +2,7 @@ package com.MLag.RedCraft;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
 import com.google.common.base.Predicate;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
@@ -27,6 +28,9 @@ public class GeneratorOre implements IWorldGenerator {
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch (world.provider.getDimension()) {
+            case END:
+                runGenerator(BlocksRegisters.ICE_ORE.getDefaultState(),6,2,2,254,BlockMatcher.forBlock(Blocks.END_STONE),world,random,chunkX,chunkZ);
+                break;
             case NETHER:
                 runGenerator(BlocksRegisters.Red_ore.getDefaultState(), 6, 2, 2, 20, BlockMatcher.forBlock(Blocks.NETHERRACK), world, random, chunkX, chunkZ);
 

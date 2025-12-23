@@ -1,4 +1,4 @@
-package com.MLag.RedCraft.Blocks.SpecifityBlocks;
+package com.MLag.RedCraft.Blocks.BoykisserBlocks;
 
 import com.MLag.RedCraft.Blocks.BlocksRegisters;
 import com.MLag.RedCraft.Blocks.CatBlockBase;
@@ -12,18 +12,17 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BoykisserSmile extends CatBlockBase {
-    public BoykisserSmile(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
+public class BoykisserSad extends CatBlockBase {
+    public BoykisserSad(String name, Material material, float setHardness, CreativeTabs creativeTabs, SoundType soundType) {
         super(name, material, setHardness, creativeTabs, soundType);
-
     }
-
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 
         if (!worldIn.isRemote){
-            worldIn.setBlockState(pos, BlocksRegisters.boykisser_happy.getDefaultState(),3);
+
+            worldIn.setBlockState(pos, BlocksRegisters.boykisser_smile.getDefaultState(),3);
 
         }
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);

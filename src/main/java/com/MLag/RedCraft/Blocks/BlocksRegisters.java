@@ -1,7 +1,14 @@
 package com.MLag.RedCraft.Blocks;
 
+import com.MLag.RedCraft.Blocks.BoykisserBlocks.BoykisserBlock;
+import com.MLag.RedCraft.Blocks.BoykisserBlocks.BoykisserHappy;
+import com.MLag.RedCraft.Blocks.BoykisserBlocks.BoykisserSad;
+import com.MLag.RedCraft.Blocks.BoykisserBlocks.BoykisserSmile;
 import com.MLag.RedCraft.Blocks.EnergyBlocks.EnergyConverter;
 import com.MLag.RedCraft.Blocks.Machines.FireCraftingTableBlock;
+import com.MLag.RedCraft.Blocks.Ores.IceOre;
+import com.MLag.RedCraft.Blocks.Ores.NaturalOre;
+import com.MLag.RedCraft.Blocks.Ores.RedOre;
 import com.MLag.RedCraft.Blocks.SpecifityBlocks.*;
 import com.MLag.RedCraft.utils.CreativeTabsRegister;
 import net.minecraft.block.Block;
@@ -36,7 +43,7 @@ public class BlocksRegisters {
     public static final Block gars_block = new GarsBlock("gars_block",Material.GROUND,3f,CreativeTabsRegister.BLOCKS,SoundType.SNOW);
 
     public static final Block energy_converter = new EnergyConverter("energy_converter",Material.ROCK,3f,CreativeTabsRegister.BLOCKS,SoundType.STONE);
-
+    public static final Block ICE_ORE = new IceOre("ice_ore");
     public BlocksRegisters() {
 
     }

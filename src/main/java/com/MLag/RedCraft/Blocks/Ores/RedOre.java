@@ -1,4 +1,4 @@
-package com.MLag.RedCraft.Blocks.SpecifityBlocks;
+package com.MLag.RedCraft.Blocks.Ores;
 
 import com.MLag.RedCraft.Blocks.BlockCreateOre;
 import com.MLag.RedCraft.Main;
@@ -31,10 +31,7 @@ public class RedOre extends BlockCreateOre {
 
     public static void fireAttack(Entity entityIn) {
         // FIXME: 06.09.2023
-
         try {
-
-
             if(entityIn instanceof EntityMob){
                 entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
             }else if(entityIn instanceof EntityPlayer){
@@ -45,8 +42,6 @@ public class RedOre extends BlockCreateOre {
                     }
                 }
             }
-
-
 
         } catch (Exception e) {
                 Main.log.error(e);

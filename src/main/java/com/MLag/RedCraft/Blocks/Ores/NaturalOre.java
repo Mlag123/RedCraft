@@ -1,4 +1,4 @@
-package com.MLag.RedCraft.Blocks.SpecifityBlocks;
+package com.MLag.RedCraft.Blocks.Ores;
 
 import com.MLag.RedCraft.Blocks.BlockCreateOre;
 import com.google.common.base.Predicate;
