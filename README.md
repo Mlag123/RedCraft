@@ -13,6 +13,8 @@ Move file in  "mods" folder.
 
 ## Build
 
+>need jre 1.8 SDK
+
 Clone repository, open from inteleji idea.
 
 Start "runClient"
