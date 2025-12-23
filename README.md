@@ -25,6 +25,6 @@ Builded jar will be located in
 /build/reobfjar/*
 ```
 
-##Commiting
+## Commiting
 
 When you commit, write your nickname.
